@@ -24,6 +24,11 @@
 		C588CBFE26A51FF900CFA1EE /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C588CBFD26A51FF900CFA1EE /* ListPresenter.swift */; };
 		C588CC0326A5206800CFA1EE /* ListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C588CC0226A5206800CFA1EE /* ListModule.swift */; };
 		C588CC0826A5208400CFA1EE /* GnomeCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C588CC0726A5208400CFA1EE /* GnomeCardCell.swift */; };
+		C588CC1926A53D5300CFA1EE /* DetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C588CC1826A53D5300CFA1EE /* DetailModule.swift */; };
+		C588CC2126A53D5F00CFA1EE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C588CC2026A53D5F00CFA1EE /* DetailViewController.swift */; };
+		C588CC2626A53D6900CFA1EE /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C588CC2526A53D6900CFA1EE /* DetailPresenter.swift */; };
+		C588CC2B26A53D7600CFA1EE /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C588CC2A26A53D7600CFA1EE /* DetailInteractor.swift */; };
+		C588CC3026A53D8600CFA1EE /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C588CC2F26A53D8600CFA1EE /* DetailRouter.swift */; };
 		D7F77FA26944FC96B3AF939F /* Pods_BrastlewarkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72105DBFB90A49BB6A19DAD9 /* Pods_BrastlewarkTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +79,11 @@
 		C588CBFD26A51FF900CFA1EE /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
 		C588CC0226A5206800CFA1EE /* ListModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModule.swift; sourceTree = "<group>"; };
 		C588CC0726A5208400CFA1EE /* GnomeCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GnomeCardCell.swift; sourceTree = "<group>"; };
+		C588CC1826A53D5300CFA1EE /* DetailModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModule.swift; sourceTree = "<group>"; };
+		C588CC2026A53D5F00CFA1EE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		C588CC2526A53D6900CFA1EE /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		C588CC2A26A53D7600CFA1EE /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		C588CC2F26A53D8600CFA1EE /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
 		D2C51268B3EEE1482BAC40BC /* Pods-BrastlewarkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrastlewarkTests.release.xcconfig"; path = "Target Support Files/Pods-BrastlewarkTests/Pods-BrastlewarkTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -239,6 +249,11 @@
 		C588CC1726A53D0A00CFA1EE /* DetailModule */ = {
 			isa = PBXGroup;
 			children = (
+				C588CC1826A53D5300CFA1EE /* DetailModule.swift */,
+				C588CC2026A53D5F00CFA1EE /* DetailViewController.swift */,
+				C588CC2526A53D6900CFA1EE /* DetailPresenter.swift */,
+				C588CC2A26A53D7600CFA1EE /* DetailInteractor.swift */,
+				C588CC2F26A53D8600CFA1EE /* DetailRouter.swift */,
 			);
 			path = DetailModule;
 			sourceTree = "<group>";
@@ -510,14 +525,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C588CC3026A53D8600CFA1EE /* DetailRouter.swift in Sources */,
 				C588CBEF26A51FCC00CFA1EE /* ListInteractor.swift in Sources */,
 				C588CBF926A51FEB00CFA1EE /* ListRouter.swift in Sources */,
 				C588CBFE26A51FF900CFA1EE /* ListPresenter.swift in Sources */,
+				C588CC2126A53D5F00CFA1EE /* DetailViewController.swift in Sources */,
 				C565575726A5124600ECF9F6 /* AppDelegate.swift in Sources */,
 				C588CBF426A51FD900CFA1EE /* ListViewController.swift in Sources */,
 				C565575926A5124600ECF9F6 /* SceneDelegate.swift in Sources */,
+				C588CC1926A53D5300CFA1EE /* DetailModule.swift in Sources */,
 				C588CBE526A51F7A00CFA1EE /* BaseProtocol.swift in Sources */,
 				C5121B3C26A5179800903A0C /* GnomeEntity.swift in Sources */,
+				C588CC2626A53D6900CFA1EE /* DetailPresenter.swift in Sources */,
+				C588CC2B26A53D7600CFA1EE /* DetailInteractor.swift in Sources */,
 				C588CC0826A5208400CFA1EE /* GnomeCardCell.swift in Sources */,
 				C588CC0326A5206800CFA1EE /* ListModule.swift in Sources */,
 			);
