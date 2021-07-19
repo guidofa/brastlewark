@@ -50,13 +50,13 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "GnomeCardCell")
             as? GnomeCardCell {
-            cell.configure(name: gnomesToShow[indexPath.row].name)
+            cell.configure(withGnome: gnomesToShow[indexPath.row])
             return cell
         }
         return UITableViewCell()
