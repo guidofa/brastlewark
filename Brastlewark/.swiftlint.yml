@@ -1,3 +1,7 @@
+disabled_rules:
+    - trailing_whitespace
+    - type_name
+    
 
 opt_in_rules:
     - empty_count
@@ -43,7 +47,7 @@ large_tuple:
     error: 10
     
 identifier_name:
-    allowed_symbols: "_"
+    allowed_symbols: ["_","B"]
     max_length:
         warning: 60
         error: 60
