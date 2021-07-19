@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class GnomeCardCell: UITableViewCell {
     @IBOutlet fileprivate weak var nameLabel: UILabel!
@@ -26,10 +27,36 @@ class GnomeCardCell: UITableViewCell {
         heightValueLabel.text = String(gnome.height)
         weightValueLabel.text = String(gnome.weight)
         friendsAmountLabel.text = String(gnome.friends.count)
+        setImage(urlString: gnome.thumbnail)
     }
     
     func styleCardView() {
         cardView.layer.borderWidth = 1
         cardView.layer.cornerRadius = 4
+    }
+    
+    func setImage(urlString: String) {
+        let url = URL(string: urlString)
+        let processor = DownsamplingImageProcessor(size: thumbnailImageView.bounds.size)
+                     |> RoundCornerImageProcessor(cornerRadius: 8)
+        thumbnailImageView.kf.indicatorType = .activity
+        thumbnailImageView.kf.setImage(
+            with: url,
+            placeholder: UIImage(named: "placeholderImage"),
+            options: [
+                .processor(processor),
+                .scaleFactor(UIScreen.main.scale),
+                .transition(.fade(1)),
+                .cacheOriginalImage
+            ])
+        {
+            result in
+            switch result {
+            case .success(let value):
+                print("Task done for: \(value.source.url?.absoluteString ?? "")")
+            case .failure(let error):
+                print("Job failed: \(error.localizedDescription)")
+            }
+        }
     }
 }

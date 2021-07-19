@@ -7,6 +7,7 @@ target 'Brastlewark' do
 
   # Pods for Brastlewark
   pod 'SwiftLint'
+  pod 'Kingfisher', '~> 6.0'
 
   target 'BrastlewarkTests' do
     inherit! :search_paths
