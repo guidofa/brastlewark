@@ -12,12 +12,18 @@
 		C5121B3C26A5179800903A0C /* GnomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5121B3B26A5179800903A0C /* GnomeEntity.swift */; };
 		C565575726A5124600ECF9F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C565575626A5124600ECF9F6 /* AppDelegate.swift */; };
 		C565575926A5124600ECF9F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C565575826A5124600ECF9F6 /* SceneDelegate.swift */; };
-		C565575B26A5124600ECF9F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C565575A26A5124600ECF9F6 /* ViewController.swift */; };
 		C565575E26A5124600ECF9F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C565575C26A5124600ECF9F6 /* Main.storyboard */; };
 		C565576026A5124700ECF9F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C565575F26A5124700ECF9F6 /* Assets.xcassets */; };
 		C565576326A5124700ECF9F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C565576126A5124700ECF9F6 /* LaunchScreen.storyboard */; };
 		C565576E26A5124700ECF9F6 /* BrastlewarkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C565576D26A5124700ECF9F6 /* BrastlewarkTests.swift */; };
 		C565577926A5124700ECF9F6 /* BrastlewarkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C565577826A5124700ECF9F6 /* BrastlewarkUITests.swift */; };
+		C588CBE526A51F7A00CFA1EE /* BaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C588CBE426A51F7A00CFA1EE /* BaseProtocol.swift */; };
+		C588CBEF26A51FCC00CFA1EE /* ListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C588CBEE26A51FCC00CFA1EE /* ListInteractor.swift */; };
+		C588CBF426A51FD900CFA1EE /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C588CBF326A51FD900CFA1EE /* ListViewController.swift */; };
+		C588CBF926A51FEB00CFA1EE /* ListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C588CBF826A51FEB00CFA1EE /* ListRouter.swift */; };
+		C588CBFE26A51FF900CFA1EE /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C588CBFD26A51FF900CFA1EE /* ListPresenter.swift */; };
+		C588CC0326A5206800CFA1EE /* ListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C588CC0226A5206800CFA1EE /* ListModule.swift */; };
+		C588CC0826A5208400CFA1EE /* GnomeCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C588CC0726A5208400CFA1EE /* GnomeCardCell.swift */; };
 		D7F77FA26944FC96B3AF939F /* Pods_BrastlewarkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72105DBFB90A49BB6A19DAD9 /* Pods_BrastlewarkTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +57,6 @@
 		C565575326A5124600ECF9F6 /* Brastlewark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brastlewark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C565575626A5124600ECF9F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C565575826A5124600ECF9F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C565575A26A5124600ECF9F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C565575D26A5124600ECF9F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C565575F26A5124700ECF9F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C565576226A5124700ECF9F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,6 +67,13 @@
 		C565577426A5124700ECF9F6 /* BrastlewarkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrastlewarkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C565577826A5124700ECF9F6 /* BrastlewarkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrastlewarkUITests.swift; sourceTree = "<group>"; };
 		C565577A26A5124700ECF9F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C588CBE426A51F7A00CFA1EE /* BaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProtocol.swift; sourceTree = "<group>"; };
+		C588CBEE26A51FCC00CFA1EE /* ListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractor.swift; sourceTree = "<group>"; };
+		C588CBF326A51FD900CFA1EE /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		C588CBF826A51FEB00CFA1EE /* ListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouter.swift; sourceTree = "<group>"; };
+		C588CBFD26A51FF900CFA1EE /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
+		C588CC0226A5206800CFA1EE /* ListModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModule.swift; sourceTree = "<group>"; };
+		C588CC0726A5208400CFA1EE /* GnomeCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GnomeCardCell.swift; sourceTree = "<group>"; };
 		D2C51268B3EEE1482BAC40BC /* Pods-BrastlewarkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrastlewarkTests.release.xcconfig"; path = "Target Support Files/Pods-BrastlewarkTests/Pods-BrastlewarkTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,7 +130,8 @@
 		C5121B2E26A515C400903A0C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				C565575A26A5124600ECF9F6 /* ViewController.swift */,
+				C588CBE926A51F8900CFA1EE /* ListModule */,
+				C588CBE426A51F7A00CFA1EE /* BaseProtocol.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -199,6 +212,27 @@
 				C565577A26A5124700ECF9F6 /* Info.plist */,
 			);
 			path = BrastlewarkUITests;
+			sourceTree = "<group>";
+		};
+		C588CBE926A51F8900CFA1EE /* ListModule */ = {
+			isa = PBXGroup;
+			children = (
+				C588CBEA26A51FAD00CFA1EE /* Cells */,
+				C588CBEE26A51FCC00CFA1EE /* ListInteractor.swift */,
+				C588CBF326A51FD900CFA1EE /* ListViewController.swift */,
+				C588CBF826A51FEB00CFA1EE /* ListRouter.swift */,
+				C588CBFD26A51FF900CFA1EE /* ListPresenter.swift */,
+				C588CC0226A5206800CFA1EE /* ListModule.swift */,
+			);
+			path = ListModule;
+			sourceTree = "<group>";
+		};
+		C588CBEA26A51FAD00CFA1EE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C588CC0726A5208400CFA1EE /* GnomeCardCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		E23E493BB49EE1359780DEB7 /* Frameworks */ = {
@@ -432,10 +466,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C565575B26A5124600ECF9F6 /* ViewController.swift in Sources */,
+				C588CBEF26A51FCC00CFA1EE /* ListInteractor.swift in Sources */,
+				C588CBF926A51FEB00CFA1EE /* ListRouter.swift in Sources */,
+				C588CBFE26A51FF900CFA1EE /* ListPresenter.swift in Sources */,
 				C565575726A5124600ECF9F6 /* AppDelegate.swift in Sources */,
+				C588CBF426A51FD900CFA1EE /* ListViewController.swift in Sources */,
 				C565575926A5124600ECF9F6 /* SceneDelegate.swift in Sources */,
+				C588CBE526A51F7A00CFA1EE /* BaseProtocol.swift in Sources */,
 				C5121B3C26A5179800903A0C /* GnomeEntity.swift in Sources */,
+				C588CC0826A5208400CFA1EE /* GnomeCardCell.swift in Sources */,
+				C588CC0326A5206800CFA1EE /* ListModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
