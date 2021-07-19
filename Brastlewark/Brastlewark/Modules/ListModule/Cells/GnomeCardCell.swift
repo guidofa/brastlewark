@@ -28,21 +28,23 @@ class GnomeCardCell: UITableViewCell {
         weightValueLabel.text = String(gnome.weight)
         friendsAmountLabel.text = String(gnome.friends.count)
         setImage(urlString: gnome.thumbnail)
+        thumbnailImageView.layer.cornerRadius = thumbnailImageView.frame.height/2
     }
     
     func styleCardView() {
         cardView.layer.borderWidth = 1
         cardView.layer.cornerRadius = 4
+        cardView.backgroundColor = ColorHelper.darkColor()
+        self.contentView.backgroundColor = ColorHelper.brightColor()
     }
     
     func setImage(urlString: String) {
         let url = URL(string: urlString)
-        let processor = DownsamplingImageProcessor(size: thumbnailImageView.bounds.size)
-                     |> RoundCornerImageProcessor(cornerRadius: 8)
+        let processor = DownsamplingImageProcessor(size: thumbnailImageView.bounds.size) |> RoundCornerImageProcessor(cornerRadius: thumbnailImageView.frame.height/2)
         thumbnailImageView.kf.indicatorType = .activity
         thumbnailImageView.kf.setImage(
             with: url,
-            placeholder: UIImage(named: "placeholderImage"),
+            placeholder: UIImage(named: "gnome_placeholder"),
             options: [
                 .processor(processor),
                 .scaleFactor(UIScreen.main.scale),

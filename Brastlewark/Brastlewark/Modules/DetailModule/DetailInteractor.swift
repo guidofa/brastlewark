@@ -14,4 +14,3 @@ protocol DetailInteractorProtocol: AnyObject {
 class DetailInteractor: DetailModule.Interactor, DetailInteractorProtocol {
     
 }
-

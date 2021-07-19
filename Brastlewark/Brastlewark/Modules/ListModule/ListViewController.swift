@@ -26,6 +26,7 @@ class ListViewController: ListModule.View, ListViewProtocol {
         super.viewDidLoad()
         presenter?.getGnomes()
         tableView.tableFooterView = UIView()
+        tableView.backgroundColor = ColorHelper.brightColor()
     }
     
     static func create() -> ListViewController {
