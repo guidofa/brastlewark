@@ -46,7 +46,6 @@ class ListInteractor: ListModule.Interactor, ListInteractorProtocol {
                     completion(.success(data))
                 }
             }
-            
             urlSession.resume()
         }
     }

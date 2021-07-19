@@ -218,11 +218,11 @@
 			isa = PBXGroup;
 			children = (
 				C588CBEA26A51FAD00CFA1EE /* Cells */,
-				C588CBEE26A51FCC00CFA1EE /* ListInteractor.swift */,
-				C588CBF326A51FD900CFA1EE /* ListViewController.swift */,
-				C588CBF826A51FEB00CFA1EE /* ListRouter.swift */,
-				C588CBFD26A51FF900CFA1EE /* ListPresenter.swift */,
 				C588CC0226A5206800CFA1EE /* ListModule.swift */,
+				C588CBF326A51FD900CFA1EE /* ListViewController.swift */,
+				C588CBFD26A51FF900CFA1EE /* ListPresenter.swift */,
+				C588CBEE26A51FCC00CFA1EE /* ListInteractor.swift */,
+				C588CBF826A51FEB00CFA1EE /* ListRouter.swift */,
 			);
 			path = ListModule;
 			sourceTree = "<group>";

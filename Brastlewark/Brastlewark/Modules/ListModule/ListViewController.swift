@@ -14,11 +14,18 @@ protocol ListViewProtocol: UIViewController {
 class ListViewController: ListModule.View, ListViewProtocol {
     @IBOutlet fileprivate weak var tableView: UITableView!
     
-    fileprivate var gnomesToShow: [GnomeEntity] = []
+    fileprivate var gnomesToShow: [GnomeEntity] = [] {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.getGnomes()
+        tableView.tableFooterView = UIView()
     }
     
     static func create() -> ListViewController {
@@ -33,9 +40,6 @@ class ListViewController: ListModule.View, ListViewProtocol {
     func getGnomesSuccess(data: [GnomeEntity]?) {
         if let gnomes = data {
             gnomesToShow = gnomes
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
         }
     }
 }
