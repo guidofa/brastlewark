@@ -9,6 +9,8 @@ import UIKit
 
 protocol ListViewProtocol: UIViewController {
     func getGnomesSuccess(data: [GnomeEntity]?)
+    func filterGnomesByNameResult(gnomesFiltered: [GnomeEntity])
+    func getOriginalListSuccess(originalGnomesList: [GnomeEntity])
 }
 
 class ListViewController: ListModule.View, ListViewProtocol {
@@ -27,7 +29,15 @@ class ListViewController: ListModule.View, ListViewProtocol {
         super.viewDidLoad()
         presenter?.getGnomes()
         tableView.tableFooterView = UIView()
+        view.backgroundColor = ColorHelper.brightColor()
         tableView.backgroundColor = ColorHelper.brightColor()
+        searchBar.barTintColor = ColorHelper.brightColor()
+        searchBar.searchTextField.backgroundColor = .white
+        searchBar.searchTextField.font = UIFont(name: "Montserrat-Regular", size: 16)
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self])
+            .setTitleTextAttributes([.foregroundColor: UIColor.black], for: .normal)
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self])
+            .setTitleTextAttributes([.foregroundColor: UIColor.gray], for: .disabled)
     }
     
     static func create() -> ListViewController {
@@ -44,11 +54,19 @@ class ListViewController: ListModule.View, ListViewProtocol {
             gnomesToShow = gnomes
         }
     }
+    
+    func filterGnomesByNameResult(gnomesFiltered: [GnomeEntity]) {
+        gnomesToShow = gnomesFiltered
+    }
+    
+    func getOriginalListSuccess(originalGnomesList: [GnomeEntity]) {
+        gnomesToShow = originalGnomesList
+    }
 }
 
 extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return gnomesToShow.count
+        return gnomesToShow.isEmpty ? 1 : gnomesToShow.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -56,6 +74,9 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if gnomesToShow.isEmpty {
+            return UITableViewCell()
+        }
         if let cell = tableView.dequeueReusableCell(withIdentifier: "GnomeCardCell")
             as? GnomeCardCell {
             cell.configure(withGnome: gnomesToShow[indexPath.row])
@@ -67,6 +88,15 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension ListViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        presenter?.filterGnomes(with: searchBar.text ?? "")
+        if let stringToFilter = searchBar.text, !stringToFilter.isEmpty {
+            presenter?.filterGnomesByName(with: stringToFilter)
+        }
+        searchBar.resignFirstResponder()
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        searchBar.text = ""
+        presenter?.getOriginalList()
     }
 }

@@ -10,20 +10,30 @@ import UIKit
 protocol ListPresenterProtocol: BasePresenterProtocol {
     func getGnomes()
     func getGnomesSuccess(data: [GnomeEntity]?)
-    func filterGnomes(with text: String)
+    func filterGnomesByName(with text: String)
+    func getOriginalList()
 }
 
 class ListPresenter: ListModule.Presenter, ListPresenterProtocol {
+    var gnomes: [GnomeEntity] = []
     
     func getGnomes() {
         interactor?.getGnomes()
     }
     
     func getGnomesSuccess(data: [GnomeEntity]?) {
+        if let gnomes = data {
+            self.gnomes = gnomes
+        }
         view?.getGnomesSuccess(data: data)
     }
     
-    func filterGnomes(with text: String) {
-        print("Gnomes")
+    func filterGnomesByName(with stringToFilter: String) {
+        let filteredGnomes = gnomes.filter { $0.name.range(of: stringToFilter, options: .caseInsensitive) != nil }
+        view?.filterGnomesByNameResult(gnomesFiltered: filteredGnomes)
+    }
+    
+    func getOriginalList() {
+        view?.getOriginalListSuccess(originalGnomesList: gnomes)
     }
 }
