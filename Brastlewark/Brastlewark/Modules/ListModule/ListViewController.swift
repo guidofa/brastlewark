@@ -16,6 +16,10 @@ protocol ListViewProtocol: UIViewController {
 class ListViewController: ListModule.View, ListViewProtocol {
     @IBOutlet fileprivate weak var tableView: UITableView!
     @IBOutlet fileprivate weak var searchBar: UISearchBar!
+    @IBOutlet fileprivate weak var returnToListButton: UIButton!
+    @IBAction fileprivate func returnToListOnClick() {
+        returnToList()
+    }
     
     fileprivate var gnomesToShow: [GnomeEntity] = [] {
         didSet {
@@ -27,17 +31,11 @@ class ListViewController: ListModule.View, ListViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter?.getGnomes()
-        tableView.tableFooterView = UIView()
+        styleTable()
+        styleSearchBar()
         view.backgroundColor = ColorHelper.brightColor()
-        tableView.backgroundColor = ColorHelper.brightColor()
-        searchBar.barTintColor = ColorHelper.brightColor()
-        searchBar.searchTextField.backgroundColor = .white
-        searchBar.searchTextField.font = UIFont(name: "Montserrat-Regular", size: 16)
-        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self])
-            .setTitleTextAttributes([.foregroundColor: UIColor.black], for: .normal)
-        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self])
-            .setTitleTextAttributes([.foregroundColor: UIColor.gray], for: .disabled)
+        returnToListButton.styleDarkestSquared()
+        presenter?.getGnomes()
     }
     
     static func create() -> ListViewController {
@@ -47,6 +45,21 @@ class ListViewController: ListModule.View, ListViewProtocol {
             return listController
         }
         return ListViewController()
+    }
+    
+    func styleTable() {
+        tableView.tableFooterView = UIView()
+        tableView.backgroundColor = ColorHelper.brightColor()
+    }
+    
+    func styleSearchBar() {
+        searchBar.barTintColor = ColorHelper.brightColor()
+        searchBar.searchTextField.backgroundColor = .white
+        searchBar.searchTextField.font = UIFont(name: "Montserrat-Regular", size: 16)
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self])
+            .setTitleTextAttributes([.foregroundColor: UIColor.black], for: .normal)
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self])
+            .setTitleTextAttributes([.foregroundColor: UIColor.gray], for: .disabled)
     }
     
     func getGnomesSuccess(data: [GnomeEntity]?) {
@@ -74,10 +87,12 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        returnToListButton.isHidden = true
         if gnomesToShow.isEmpty {
             if let cell = tableView
                 .dequeueReusableCell(withIdentifier: "ListErrorCell")
                 as? ListErrorCell {
+                returnToListButton.isHidden = false
                 return cell
             }
         }
@@ -103,6 +118,10 @@ extension ListViewController: UISearchBarDelegate {
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        returnToList()
+    }
+    
+    func returnToList() {
         searchBar.resignFirstResponder()
         searchBar.setShowsCancelButton(false, animated: true)
         searchBar.text = ""

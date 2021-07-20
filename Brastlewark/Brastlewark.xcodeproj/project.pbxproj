@@ -24,6 +24,8 @@
 		C565576326A5124700ECF9F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C565576126A5124700ECF9F6 /* LaunchScreen.storyboard */; };
 		C565576E26A5124700ECF9F6 /* BrastlewarkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C565576D26A5124700ECF9F6 /* BrastlewarkTests.swift */; };
 		C565577926A5124700ECF9F6 /* BrastlewarkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C565577826A5124700ECF9F6 /* BrastlewarkUITests.swift */; };
+		C56771BC26A74FD200CD855D /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56771BB26A74FD200CD855D /* UIButtonExtension.swift */; };
+		C56771C126A7555C00CD855D /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C56771C026A7555C00CD855D /* Montserrat-Bold.ttf */; };
 		C588CBE526A51F7A00CFA1EE /* BaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C588CBE426A51F7A00CFA1EE /* BaseProtocol.swift */; };
 		C588CBEF26A51FCC00CFA1EE /* ListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C588CBEE26A51FCC00CFA1EE /* ListInteractor.swift */; };
 		C588CBF426A51FD900CFA1EE /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C588CBF326A51FD900CFA1EE /* ListViewController.swift */; };
@@ -89,6 +91,8 @@
 		C565577426A5124700ECF9F6 /* BrastlewarkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrastlewarkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C565577826A5124700ECF9F6 /* BrastlewarkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrastlewarkUITests.swift; sourceTree = "<group>"; };
 		C565577A26A5124700ECF9F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C56771BB26A74FD200CD855D /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		C56771C026A7555C00CD855D /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		C588CBE426A51F7A00CFA1EE /* BaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProtocol.swift; sourceTree = "<group>"; };
 		C588CBEE26A51FCC00CFA1EE /* ListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractor.swift; sourceTree = "<group>"; };
 		C588CBF326A51FD900CFA1EE /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -199,6 +203,7 @@
 		C549917426A5E199001B5D00 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				C56771C026A7555C00CD855D /* Montserrat-Bold.ttf */,
 				C5F5FC3126A5EAB70053A2CE /* AmaticSC-Bold.ttf */,
 				C5F5FC3226A5EAB70053A2CE /* AmaticSC-Regular.ttf */,
 				C549918826A5E450001B5D00 /* Montserrat-SemiBold.ttf */,
@@ -214,6 +219,7 @@
 			children = (
 				C549916F26A5DEDC001B5D00 /* ColorHelper.swift */,
 				C5F5FC3826A5F20B0053A2CE /* UIImageViewExtension.swift */,
+				C56771BB26A74FD200CD855D /* UIButtonExtension.swift */,
 			);
 			path = "Helpers and Extensions";
 			sourceTree = "<group>";
@@ -448,6 +454,7 @@
 				C5F5FC3426A5EAB70053A2CE /* AmaticSC-Regular.ttf in Resources */,
 				C565576026A5124700ECF9F6 /* Assets.xcassets in Resources */,
 				C549917B26A5E1B5001B5D00 /* Montserrat-Regular.ttf in Resources */,
+				C56771C126A7555C00CD855D /* Montserrat-Bold.ttf in Resources */,
 				C565575E26A5124600ECF9F6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -596,6 +603,7 @@
 			files = (
 				C588CC3026A53D8600CFA1EE /* DetailRouter.swift in Sources */,
 				C588CBEF26A51FCC00CFA1EE /* ListInteractor.swift in Sources */,
+				C56771BC26A74FD200CD855D /* UIButtonExtension.swift in Sources */,
 				C588CBF926A51FEB00CFA1EE /* ListRouter.swift in Sources */,
 				C588CBFE26A51FF900CFA1EE /* ListPresenter.swift in Sources */,
 				C588CC2126A53D5F00CFA1EE /* DetailViewController.swift in Sources */,
