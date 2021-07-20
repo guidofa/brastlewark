@@ -10,9 +10,13 @@ import Kingfisher
 
 class GnomeCardCell: UITableViewCell {
     @IBOutlet fileprivate weak var nameLabel: UILabel!
+    @IBOutlet fileprivate weak var ageTitleLabel: UILabel!
     @IBOutlet fileprivate weak var ageValueLabel: UILabel!
+    @IBOutlet fileprivate weak var heightTitleLabel: UILabel!
     @IBOutlet fileprivate weak var heightValueLabel: UILabel!
+    @IBOutlet fileprivate weak var weightTitleLabel: UILabel!
     @IBOutlet fileprivate weak var weightValueLabel: UILabel!
+    @IBOutlet fileprivate weak var friendsTitleLabel: UILabel!
     @IBOutlet fileprivate weak var friendsAmountLabel: UILabel!
     @IBOutlet fileprivate weak var thumbnailImageView: UIImageView!
     @IBOutlet fileprivate weak var cardView: UIView!
@@ -20,6 +24,7 @@ class GnomeCardCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         styleCardView()
+        setTextsColor()
     }
     func configure(withGnome gnome: GnomeEntity) {
         nameLabel.text = gnome.name
@@ -34,7 +39,20 @@ class GnomeCardCell: UITableViewCell {
     func styleCardView() {
         cardView.layer.borderWidth = 1
         cardView.layer.cornerRadius = 4
-        cardView.backgroundColor = ColorHelper.darkColor()
+        cardView.backgroundColor = ColorHelper.darkestColor()
         self.contentView.backgroundColor = ColorHelper.brightColor()
+    }
+    
+    func setTextsColor() {
+        let textColor = ColorHelper.brighterColor()
+        nameLabel.textColor = textColor
+        ageTitleLabel.textColor = textColor
+        ageValueLabel.textColor = textColor
+        heightTitleLabel.textColor = textColor
+        heightValueLabel.textColor = textColor
+        weightTitleLabel.textColor = textColor
+        weightValueLabel.textColor = textColor
+        friendsTitleLabel.textColor = textColor
+        friendsAmountLabel.textColor = textColor
     }
 }

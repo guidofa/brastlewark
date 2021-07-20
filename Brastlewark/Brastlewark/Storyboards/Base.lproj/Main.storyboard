@@ -27,7 +27,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" placeholder="Search by name" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q8U-7P-ABD">
+                            <searchBar contentMode="redraw" placeholder="Search by name" translatesAutoresizingMaskIntoConstraints="NO" id="q8U-7P-ABD">
                                 <rect key="frame" x="0.0" y="44" width="428" height="56"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="name"/>
                                 <connections>
@@ -35,7 +35,7 @@
                                 </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="odL-LF-TD1">
-                                <rect key="frame" x="0.0" y="100" width="428" height="792"/>
+                                <rect key="frame" x="0.0" y="100" width="428" height="826"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
@@ -184,12 +184,16 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="ageTitleLabel" destination="ree-uk-rgv" id="oVS-kV-AIw"/>
                                             <outlet property="ageValueLabel" destination="DcR-6R-bKB" id="Njf-MP-dAr"/>
                                             <outlet property="cardView" destination="8uh-2Q-SPR" id="uGh-ai-ptx"/>
                                             <outlet property="friendsAmountLabel" destination="UdO-lk-k1d" id="KJP-uW-dDi"/>
+                                            <outlet property="friendsTitleLabel" destination="qHp-Jn-Zs1" id="5wc-KG-Af8"/>
+                                            <outlet property="heightTitleLabel" destination="IE2-Pl-OO0" id="APF-Zk-qA9"/>
                                             <outlet property="heightValueLabel" destination="PHq-Cu-2kf" id="vgQ-VP-z1V"/>
                                             <outlet property="nameLabel" destination="vCA-nm-0So" id="O9r-2V-nnb"/>
                                             <outlet property="thumbnailImageView" destination="Zfy-BL-baM" id="zJE-Ab-SnN"/>
+                                            <outlet property="weightTitleLabel" destination="C4F-6I-Puv" id="LEi-Nl-4tk"/>
                                             <outlet property="weightValueLabel" destination="DeM-BX-Iot" id="ah7-qV-nHu"/>
                                         </connections>
                                     </tableViewCell>
@@ -204,7 +208,7 @@
                         <constraints>
                             <constraint firstItem="q8U-7P-ABD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="DSH-zD-bke"/>
                             <constraint firstItem="odL-LF-TD1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QO0-Al-XmJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="odL-LF-TD1" secondAttribute="bottom" id="VqJ-nA-qmW"/>
+                            <constraint firstAttribute="bottom" secondItem="odL-LF-TD1" secondAttribute="bottom" id="VqJ-nA-qmW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="odL-LF-TD1" secondAttribute="trailing" id="W6g-q9-TcI"/>
                             <constraint firstItem="q8U-7P-ABD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Zs3-E4-J3T"/>
                             <constraint firstItem="q8U-7P-ABD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aCC-g2-Rlv"/>
