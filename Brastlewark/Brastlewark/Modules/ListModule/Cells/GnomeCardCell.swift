@@ -24,8 +24,8 @@ class GnomeCardCell: UITableViewCell {
     func configure(withGnome gnome: GnomeEntity) {
         nameLabel.text = gnome.name
         ageValueLabel.text = String(gnome.age)
-        heightValueLabel.text = String(gnome.height)
-        weightValueLabel.text = String(gnome.weight)
+        heightValueLabel.text = String(format: "%.1f", gnome.height)
+        weightValueLabel.text = String(format: "%.1f", gnome.weight)
         friendsAmountLabel.text = String(gnome.friends.count)
         thumbnailImageView.setThumbnailImage(url: gnome.thumbnail)
         thumbnailImageView.layer.cornerRadius = 8
