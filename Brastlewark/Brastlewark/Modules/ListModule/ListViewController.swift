@@ -36,6 +36,11 @@ class ListViewController: ListModule.View, ListViewProtocol {
         view.backgroundColor = ColorHelper.brightColor()
         returnToListButton.styleDarkestSquared()
         presenter?.getGnomes()
+        navigationController?.navigationBar.barTintColor = ColorHelper.darkestColor()
+        navigationController?.navigationBar.titleTextAttributes =
+            [NSAttributedString.Key.font: UIFont(name: "AmaticSC-Bold", size: 36)!,
+             NSAttributedString.Key.foregroundColor: ColorHelper.brighterColor()]
+        title = "BrastleWark"
     }
     
     static func create() -> ListViewController {
