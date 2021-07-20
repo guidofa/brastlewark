@@ -13,6 +13,7 @@ protocol ListViewProtocol: UIViewController {
 
 class ListViewController: ListModule.View, ListViewProtocol {
     @IBOutlet fileprivate weak var tableView: UITableView!
+    @IBOutlet fileprivate weak var searchBar: UISearchBar!
     
     fileprivate var gnomesToShow: [GnomeEntity] = [] {
         didSet {
@@ -61,5 +62,11 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         }
         return UITableViewCell()
+    }
+}
+
+extension ListViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        presenter?.filterGnomes(with: searchBar.text ?? "")
     }
 }

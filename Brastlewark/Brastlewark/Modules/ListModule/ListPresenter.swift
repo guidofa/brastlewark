@@ -10,6 +10,7 @@ import UIKit
 protocol ListPresenterProtocol: BasePresenterProtocol {
     func getGnomes()
     func getGnomesSuccess(data: [GnomeEntity]?)
+    func filterGnomes(with text: String)
 }
 
 class ListPresenter: ListModule.Presenter, ListPresenterProtocol {
@@ -20,5 +21,9 @@ class ListPresenter: ListModule.Presenter, ListPresenterProtocol {
     
     func getGnomesSuccess(data: [GnomeEntity]?) {
         view?.getGnomesSuccess(data: data)
+    }
+    
+    func filterGnomes(with text: String) {
+        print("Gnomes")
     }
 }
