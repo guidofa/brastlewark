@@ -11,7 +11,7 @@ import Foundation
 struct GnomeEntity: Codable {
     let id: Int
     let name: String
-    let thumbnail: String
+    let thumbnail: URL
     let age: Int
     let weight: Double
     let height: Double
