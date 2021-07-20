@@ -75,7 +75,11 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if gnomesToShow.isEmpty {
-            return UITableViewCell()
+            if let cell = tableView
+                .dequeueReusableCell(withIdentifier: "ListErrorCell")
+                as? ListErrorCell {
+                return cell
+            }
         }
         if let cell = tableView.dequeueReusableCell(withIdentifier: "GnomeCardCell")
             as? GnomeCardCell {
@@ -94,8 +98,13 @@ extension ListViewController: UISearchBarDelegate {
         searchBar.resignFirstResponder()
     }
     
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBar.setShowsCancelButton(true, animated: true)
+    }
+    
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
+        searchBar.setShowsCancelButton(false, animated: true)
         searchBar.text = ""
         presenter?.getOriginalList()
     }
