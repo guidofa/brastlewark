@@ -19,6 +19,9 @@
 		C54C753726A68B3E009A91DA /* empty_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = C54C753626A68B3E009A91DA /* empty_animation.json */; };
 		C5567FE626A868080099100A /* DetailHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5567FE526A868080099100A /* DetailHeaderCell.swift */; };
 		C5567FEB26A86C650099100A /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5567FEA26A86C650099100A /* UITableViewExtension.swift */; };
+		C5567FF626A88E9A0099100A /* CarouselTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5567FF526A88E9A0099100A /* CarouselTableCell.swift */; };
+		C5567FFB26A88EA70099100A /* CarouselCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5567FFA26A88EA70099100A /* CarouselCollectionCell.swift */; };
+		C556800826A8ACAB0099100A /* ArrayEmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C556800726A8ACAB0099100A /* ArrayEmptyCell.swift */; };
 		C565575726A5124600ECF9F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C565575626A5124600ECF9F6 /* AppDelegate.swift */; };
 		C565575926A5124600ECF9F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C565575826A5124600ECF9F6 /* SceneDelegate.swift */; };
 		C565575E26A5124600ECF9F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C565575C26A5124600ECF9F6 /* Main.storyboard */; };
@@ -82,6 +85,9 @@
 		C54C753626A68B3E009A91DA /* empty_animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = empty_animation.json; sourceTree = "<group>"; };
 		C5567FE526A868080099100A /* DetailHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderCell.swift; sourceTree = "<group>"; };
 		C5567FEA26A86C650099100A /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		C5567FF526A88E9A0099100A /* CarouselTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselTableCell.swift; sourceTree = "<group>"; };
+		C5567FFA26A88EA70099100A /* CarouselCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCollectionCell.swift; sourceTree = "<group>"; };
+		C556800726A8ACAB0099100A /* ArrayEmptyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayEmptyCell.swift; sourceTree = "<group>"; };
 		C565575326A5124600ECF9F6 /* Brastlewark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brastlewark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C565575626A5124600ECF9F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C565575826A5124600ECF9F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -250,6 +256,9 @@
 			isa = PBXGroup;
 			children = (
 				C5567FE526A868080099100A /* DetailHeaderCell.swift */,
+				C5567FF526A88E9A0099100A /* CarouselTableCell.swift */,
+				C5567FFA26A88EA70099100A /* CarouselCollectionCell.swift */,
+				C556800726A8ACAB0099100A /* ArrayEmptyCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -617,7 +626,9 @@
 			files = (
 				C588CC3026A53D8600CFA1EE /* DetailRouter.swift in Sources */,
 				C588CBEF26A51FCC00CFA1EE /* ListInteractor.swift in Sources */,
+				C5567FF626A88E9A0099100A /* CarouselTableCell.swift in Sources */,
 				C56771BC26A74FD200CD855D /* UIButtonExtension.swift in Sources */,
+				C5567FFB26A88EA70099100A /* CarouselCollectionCell.swift in Sources */,
 				C588CBF926A51FEB00CFA1EE /* ListRouter.swift in Sources */,
 				C588CBFE26A51FF900CFA1EE /* ListPresenter.swift in Sources */,
 				C588CC2126A53D5F00CFA1EE /* DetailViewController.swift in Sources */,
@@ -634,6 +645,7 @@
 				C5F5FC3926A5F20B0053A2CE /* UIImageViewExtension.swift in Sources */,
 				C54C752126A68573009A91DA /* ListErrorCell.swift in Sources */,
 				C588CC2B26A53D7600CFA1EE /* DetailInteractor.swift in Sources */,
+				C556800826A8ACAB0099100A /* ArrayEmptyCell.swift in Sources */,
 				C588CC0826A5208400CFA1EE /* GnomeCardCell.swift in Sources */,
 				C588CC0326A5206800CFA1EE /* ListModule.swift in Sources */,
 			);

@@ -23,7 +23,11 @@ class DetailViewController: DetailModule.View, DetailViewProtocol {
         }
     }
     fileprivate enum TableCellType {
-            case header
+        case header
+        case professions
+        case friends
+        case noFriends
+        case noProfessions
     }
     
     override func viewDidLoad() {
@@ -42,7 +46,18 @@ class DetailViewController: DetailModule.View, DetailViewProtocol {
     }
     
     func addCellsToShow() {
+        guard let gnome = gnomeToShow else { return }
         cells.append(.header)
+        if gnome.professions.isEmpty {
+            cells.append(.noProfessions)
+        } else {
+            cells.append(.professions)
+        }
+        if gnome.friends.isEmpty {
+            cells.append(.noFriends)
+        } else {
+            cells.append(.friends)
+        }
     }
     
     func getGnomeSuccess(gnome: GnomeEntity) {
@@ -56,6 +71,14 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
         return cells.count
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if cells[indexPath.row] == .header {
+            return UITableView.automaticDimension
+        } else {
+            return 190
+        }
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let gnome = gnomeToShow else { return UITableViewCell() }
         switch cells[indexPath.row] {
@@ -66,6 +89,36 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
                 cell.configure(withGnome: gnome)
                 return cell
             }
+        case .professions:
+            return getCarouselCell(array: gnomeToShow?.professions ?? ["No profession"],
+                                   title: "Professions",
+                                   tableView: tableView)
+        case .friends:
+            return getCarouselCell(array: gnomeToShow?.friends ?? ["No friends"],
+                            title: "Friends",
+                            tableView: tableView)
+        case .noFriends:
+            return getArrayEmptyCell(message: "This gnome doesn't have a friend yet", tableView: tableView)
+        case .noProfessions:
+            return getArrayEmptyCell(message: "This gnome doesn't have a profession yet", tableView: tableView)
+        }
+        return UITableViewCell()
+    }
+    
+    func getCarouselCell(array: [String], title: String, tableView: UITableView) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "CarouselTableCell")
+            as? CarouselTableCell {
+            cell.configureWithArray(array: array, title: title)
+            return cell
+        }
+        return UITableViewCell()
+    }
+    
+    func getArrayEmptyCell(message: String, tableView: UITableView) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "ArrayEmptyCell")
+            as? ArrayEmptyCell {
+            cell.configure(withMessage: message)
+            return cell
         }
         return UITableViewCell()
     }
