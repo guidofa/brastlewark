@@ -8,8 +8,8 @@
 import UIKit
 
 extension UITableView {
-    func styleTableViewForBrastlewark() {
+    func styleTableViewForBrastlewark(color: UIColor) {
         self.tableFooterView = UIView()
-        self.backgroundColor = ColorHelper.brightColor()
+        self.backgroundColor = color
     }
 }

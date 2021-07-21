@@ -28,11 +28,21 @@ class DetailViewController: DetailModule.View, DetailViewProtocol {
         case friends
         case noFriends
         case noProfessions
+        fileprivate var height: CGFloat {
+            switch self {
+            case .header:
+                return UITableView.automaticDimension
+            case .professions, .friends:
+                return 190
+            case .noFriends, .noProfessions:
+                return 100
+            }
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.styleTableViewForBrastlewark()
+        tableView.styleTableViewForBrastlewark(color: ColorHelper.brightestColor())
         presenter?.getGnome()
     }
     
@@ -72,11 +82,7 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if cells[indexPath.row] == .header {
-            return UITableView.automaticDimension
-        } else {
-            return 190
-        }
+        return cells[indexPath.row].height
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -98,7 +104,7 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
                             title: "Friends",
                             tableView: tableView)
         case .noFriends:
-            return getArrayEmptyCell(message: "This gnome doesn't have a friend yet", tableView: tableView)
+            return getArrayEmptyCell(message: "This gnome doesn't have friends yet", tableView: tableView)
         case .noProfessions:
             return getArrayEmptyCell(message: "This gnome doesn't have a profession yet", tableView: tableView)
         }

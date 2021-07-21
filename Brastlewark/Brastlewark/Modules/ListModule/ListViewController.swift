@@ -47,7 +47,7 @@ class ListViewController: ListModule.View, ListViewProtocol {
     }
     
     func styleOtherElements() {
-        tableView.styleTableViewForBrastlewark()
+        tableView.styleTableViewForBrastlewark(color: ColorHelper.brightColor())
         view.backgroundColor = ColorHelper.brightColor()
         title = "BrastleWark"
         navigationController?.navigationBar.barTintColor = ColorHelper.darkestColor()

@@ -12,10 +12,15 @@ class CarouselCollectionCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        styleContentView()
+        stringToShowLabel.textColor = ColorHelper.brightestColor()
+    }
+    
+    func styleContentView() {
         contentView.backgroundColor = ColorHelper.darkColor()
         contentView.layer.borderWidth = 1
         contentView.layer.borderColor = ColorHelper.darkestColor().cgColor
-        stringToShowLabel.textColor = ColorHelper.brightestColor()
+        contentView.layer.cornerRadius = 8
     }
     
     func configure(withString stringToShow: String) {
