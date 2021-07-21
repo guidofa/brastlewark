@@ -14,7 +14,6 @@ class DetailHeaderCell: UITableViewCell {
     @IBOutlet fileprivate weak var weightLabel: UILabel!
     @IBOutlet fileprivate weak var hairColorLabel: UILabel!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         self.contentView.backgroundColor = ColorHelper.darkestColor()
@@ -23,6 +22,11 @@ class DetailHeaderCell: UITableViewCell {
     
     func configure(withGnome gnome: GnomeEntity) {
         profilePhoto.setThumbnailImage(url: gnome.thumbnail)
+        profilePhoto.layer.cornerRadius = 8
+        ageLabel.text = "Age: \(gnome.age) years old"
+        heightLabel.text = String(format: "Height: %.1f cm", gnome.height)
+        weightLabel.text = String(format: "Weight: %.1f kg", gnome.weight)
+        hairColorLabel.text = "Hair Color: \(gnome.hair_color)"
     }
     
     func setTextsColor() {
