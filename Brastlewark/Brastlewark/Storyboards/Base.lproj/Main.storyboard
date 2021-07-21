@@ -295,13 +295,108 @@
                     <view key="view" contentMode="scaleToFill" id="Om5-6X-0Tm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rET-kR-PSk">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailHeaderCell" rowHeight="415" id="har-Ea-9Pw" customClass="DetailHeaderCell" customModule="Brastlewark" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="415"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="har-Ea-9Pw" id="SAz-bp-Hp8">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="415"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Et-IZ-mnD">
+                                                    <rect key="frame" x="30" y="30" width="354" height="250"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="250" id="LR6-3J-rvM"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age: 38 years old" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWA-lo-bvN">
+                                                    <rect key="frame" x="30" y="296" width="354" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="wIU-yT-3oO"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height: 1.70mts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERp-3E-r2M">
+                                                    <rect key="frame" x="30" y="325" width="354" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="8Ub-Uj-NBH"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight: 70kgs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="961-yz-SQw">
+                                                    <rect key="frame" x="30" y="354" width="354" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="fu7-Sw-8Ky"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hair Color: Red" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VhR-GT-jDe">
+                                                    <rect key="frame" x="30" y="383" width="354" height="16"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="VhR-GT-jDe" firstAttribute="leading" secondItem="961-yz-SQw" secondAttribute="leading" id="Bfq-hj-6i7"/>
+                                                <constraint firstItem="fWA-lo-bvN" firstAttribute="trailing" secondItem="0Et-IZ-mnD" secondAttribute="trailing" id="GER-IY-SZb"/>
+                                                <constraint firstItem="0Et-IZ-mnD" firstAttribute="top" secondItem="SAz-bp-Hp8" secondAttribute="top" constant="30" id="HTb-JP-fhG"/>
+                                                <constraint firstItem="0Et-IZ-mnD" firstAttribute="leading" secondItem="SAz-bp-Hp8" secondAttribute="leading" constant="30" id="Ij8-ec-zDm"/>
+                                                <constraint firstItem="fWA-lo-bvN" firstAttribute="leading" secondItem="0Et-IZ-mnD" secondAttribute="leading" id="NkK-Db-Nl9"/>
+                                                <constraint firstItem="961-yz-SQw" firstAttribute="leading" secondItem="ERp-3E-r2M" secondAttribute="leading" id="QmA-Dv-z5v"/>
+                                                <constraint firstItem="ERp-3E-r2M" firstAttribute="trailing" secondItem="fWA-lo-bvN" secondAttribute="trailing" id="V6y-gg-F75"/>
+                                                <constraint firstItem="961-yz-SQw" firstAttribute="trailing" secondItem="ERp-3E-r2M" secondAttribute="trailing" id="VZ6-fr-H64"/>
+                                                <constraint firstItem="VhR-GT-jDe" firstAttribute="trailing" secondItem="961-yz-SQw" secondAttribute="trailing" id="YNQ-EN-239"/>
+                                                <constraint firstAttribute="trailing" secondItem="0Et-IZ-mnD" secondAttribute="trailing" constant="30" id="f65-5a-qez"/>
+                                                <constraint firstItem="fWA-lo-bvN" firstAttribute="top" secondItem="0Et-IZ-mnD" secondAttribute="bottom" constant="16" id="g64-mq-acj"/>
+                                                <constraint firstAttribute="bottom" secondItem="VhR-GT-jDe" secondAttribute="bottom" constant="16" id="qdm-fx-mac"/>
+                                                <constraint firstItem="961-yz-SQw" firstAttribute="top" secondItem="ERp-3E-r2M" secondAttribute="bottom" constant="8" id="sWS-Sj-0Mn"/>
+                                                <constraint firstItem="ERp-3E-r2M" firstAttribute="leading" secondItem="fWA-lo-bvN" secondAttribute="leading" id="tgX-w5-X9X"/>
+                                                <constraint firstItem="ERp-3E-r2M" firstAttribute="top" secondItem="fWA-lo-bvN" secondAttribute="bottom" constant="8" id="tkM-tr-8Zy"/>
+                                                <constraint firstItem="VhR-GT-jDe" firstAttribute="top" secondItem="961-yz-SQw" secondAttribute="bottom" constant="8" id="zQ3-gX-p99"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="ageLabel" destination="fWA-lo-bvN" id="NW3-SK-DGd"/>
+                                            <outlet property="hairColorLabel" destination="VhR-GT-jDe" id="Yno-Ra-8Kp"/>
+                                            <outlet property="heightLabel" destination="ERp-3E-r2M" id="pgk-Bq-e9K"/>
+                                            <outlet property="profilePhoto" destination="0Et-IZ-mnD" id="pdm-mB-pow"/>
+                                            <outlet property="weightLabel" destination="961-yz-SQw" id="d64-7T-qDV"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="y50-GF-WZa" id="AZa-Jk-LY5"/>
+                                    <outlet property="delegate" destination="y50-GF-WZa" id="p10-nF-9SL"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dSZ-4L-ySc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dSZ-4L-ySc" firstAttribute="bottom" secondItem="rET-kR-PSk" secondAttribute="bottom" id="Ica-cj-SeO"/>
+                            <constraint firstItem="rET-kR-PSk" firstAttribute="leading" secondItem="dSZ-4L-ySc" secondAttribute="leading" id="gJL-r1-PuY"/>
+                            <constraint firstItem="rET-kR-PSk" firstAttribute="top" secondItem="dSZ-4L-ySc" secondAttribute="top" id="iPw-qk-9wK"/>
+                            <constraint firstItem="dSZ-4L-ySc" firstAttribute="trailing" secondItem="rET-kR-PSk" secondAttribute="trailing" id="iq3-Tr-Faz"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="rET-kR-PSk" id="Wbo-5g-Y5s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Vz-3v-Twx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1987.8504672897195" y="87.473002159827217"/>
+            <point key="canvasLocation" x="1986.9565217391305" y="87.228260869565219"/>
         </scene>
     </scenes>
     <resources>

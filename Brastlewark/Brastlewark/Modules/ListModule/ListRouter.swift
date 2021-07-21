@@ -8,13 +8,12 @@
 import UIKit
 
 protocol ListRouterProtocol: AnyObject {
-    
+    func pushToDetail(gnome: GnomeEntity)
 }
 
 class ListRouter: ListModule.Router, ListRouterProtocol {
-    var home: UINavigationController?
-        
-    var homeViewController: UIViewController? {
-        return home?.viewControllers.first
+    
+    func pushToDetail(gnome: GnomeEntity) {
+        presenter?.navigation?.pushViewController(DetailModule.assemble(gnomeToShow: gnome), animated: true)
     }
 }

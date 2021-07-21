@@ -20,7 +20,7 @@ class ColorHelper: NSObject {
         return UIColor(red: 163/255, green: 210/255, blue: 202/255, alpha: 1)
     }
     
-    class func brighterColor() -> UIColor {
+    class func brightestColor() -> UIColor {
         return UIColor(red: 232/255, green: 222/255, blue: 210/255, alpha: 1)
     }
 }

@@ -8,7 +8,7 @@
 import UIKit
 
 class DetailModule: NSObject {
-    static func assemble() -> DetailViewProtocol {
+    static func assemble(gnomeToShow gnome: GnomeEntity) -> DetailViewProtocol {
         let view = DetailViewController.create()
         let interactor = DetailInteractor()
         let presenter = DetailPresenter()
@@ -17,6 +17,7 @@ class DetailModule: NSObject {
         presenter.view = view
         presenter.interactor = interactor
         presenter.router = router
+        presenter.gnome = gnome
         view.presenter = presenter
         interactor.presenter = presenter
         router.presenter = presenter

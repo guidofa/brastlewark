@@ -12,6 +12,7 @@ protocol ListPresenterProtocol: BasePresenterProtocol {
     func getGnomesSuccess(data: [GnomeEntity]?)
     func filterGnomesByName(with text: String)
     func getOriginalList()
+    func showDetail(ofGnome gnome: GnomeEntity)
 }
 
 class ListPresenter: ListModule.Presenter, ListPresenterProtocol {
@@ -35,5 +36,9 @@ class ListPresenter: ListModule.Presenter, ListPresenterProtocol {
     
     func getOriginalList() {
         view?.getOriginalListSuccess(originalGnomesList: gnomes)
+    }
+    
+    func showDetail(ofGnome gnome: GnomeEntity) {
+        router?.pushToDetail(gnome: gnome)
     }
 }

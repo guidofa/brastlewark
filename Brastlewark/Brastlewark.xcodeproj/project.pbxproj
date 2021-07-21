@@ -17,6 +17,8 @@
 		C549918926A5E450001B5D00 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C549918826A5E450001B5D00 /* Montserrat-SemiBold.ttf */; };
 		C54C752126A68573009A91DA /* ListErrorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54C752026A68573009A91DA /* ListErrorCell.swift */; };
 		C54C753726A68B3E009A91DA /* empty_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = C54C753626A68B3E009A91DA /* empty_animation.json */; };
+		C5567FE626A868080099100A /* DetailHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5567FE526A868080099100A /* DetailHeaderCell.swift */; };
+		C5567FEB26A86C650099100A /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5567FEA26A86C650099100A /* UITableViewExtension.swift */; };
 		C565575726A5124600ECF9F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C565575626A5124600ECF9F6 /* AppDelegate.swift */; };
 		C565575926A5124600ECF9F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C565575826A5124600ECF9F6 /* SceneDelegate.swift */; };
 		C565575E26A5124600ECF9F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C565575C26A5124600ECF9F6 /* Main.storyboard */; };
@@ -78,6 +80,8 @@
 		C549918826A5E450001B5D00 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		C54C752026A68573009A91DA /* ListErrorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListErrorCell.swift; sourceTree = "<group>"; };
 		C54C753626A68B3E009A91DA /* empty_animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = empty_animation.json; sourceTree = "<group>"; };
+		C5567FE526A868080099100A /* DetailHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderCell.swift; sourceTree = "<group>"; };
+		C5567FEA26A86C650099100A /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		C565575326A5124600ECF9F6 /* Brastlewark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brastlewark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C565575626A5124600ECF9F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C565575826A5124600ECF9F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -220,6 +224,7 @@
 				C549916F26A5DEDC001B5D00 /* ColorHelper.swift */,
 				C5F5FC3826A5F20B0053A2CE /* UIImageViewExtension.swift */,
 				C56771BB26A74FD200CD855D /* UIButtonExtension.swift */,
+				C5567FEA26A86C650099100A /* UITableViewExtension.swift */,
 			);
 			path = "Helpers and Extensions";
 			sourceTree = "<group>";
@@ -239,6 +244,14 @@
 				C54C753626A68B3E009A91DA /* empty_animation.json */,
 			);
 			path = "Lottie Files";
+			sourceTree = "<group>";
+		};
+		C5567FE426A867EA0099100A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C5567FE526A868080099100A /* DetailHeaderCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		C565574A26A5124600ECF9F6 = {
@@ -317,6 +330,7 @@
 		C588CC1726A53D0A00CFA1EE /* DetailModule */ = {
 			isa = PBXGroup;
 			children = (
+				C5567FE426A867EA0099100A /* Cells */,
 				C588CC1826A53D5300CFA1EE /* DetailModule.swift */,
 				C588CC2026A53D5F00CFA1EE /* DetailViewController.swift */,
 				C588CC2526A53D6900CFA1EE /* DetailPresenter.swift */,
@@ -607,9 +621,11 @@
 				C588CBF926A51FEB00CFA1EE /* ListRouter.swift in Sources */,
 				C588CBFE26A51FF900CFA1EE /* ListPresenter.swift in Sources */,
 				C588CC2126A53D5F00CFA1EE /* DetailViewController.swift in Sources */,
+				C5567FEB26A86C650099100A /* UITableViewExtension.swift in Sources */,
 				C565575726A5124600ECF9F6 /* AppDelegate.swift in Sources */,
 				C588CBF426A51FD900CFA1EE /* ListViewController.swift in Sources */,
 				C565575926A5124600ECF9F6 /* SceneDelegate.swift in Sources */,
+				C5567FE626A868080099100A /* DetailHeaderCell.swift in Sources */,
 				C588CC1926A53D5300CFA1EE /* DetailModule.swift in Sources */,
 				C588CBE526A51F7A00CFA1EE /* BaseProtocol.swift in Sources */,
 				C5121B3C26A5179800903A0C /* GnomeEntity.swift in Sources */,

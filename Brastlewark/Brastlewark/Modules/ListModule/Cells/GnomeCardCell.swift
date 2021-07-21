@@ -44,7 +44,7 @@ class GnomeCardCell: UITableViewCell {
     }
     
     func setTextsColor() {
-        let textColor = ColorHelper.brighterColor()
+        let textColor = ColorHelper.brightestColor()
         nameLabel.textColor = textColor
         ageTitleLabel.textColor = textColor
         ageValueLabel.textColor = textColor

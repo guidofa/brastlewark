@@ -31,16 +31,10 @@ class ListViewController: ListModule.View, ListViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        styleTable()
         styleSearchBar()
-        view.backgroundColor = ColorHelper.brightColor()
+        styleOtherElements()
         returnToListButton.styleDarkestSquared()
         presenter?.getGnomes()
-        navigationController?.navigationBar.barTintColor = ColorHelper.darkestColor()
-        navigationController?.navigationBar.titleTextAttributes =
-            [NSAttributedString.Key.font: UIFont(name: "AmaticSC-Bold", size: 36)!,
-             NSAttributedString.Key.foregroundColor: ColorHelper.brighterColor()]
-        title = "BrastleWark"
     }
     
     static func create() -> ListViewController {
@@ -52,9 +46,15 @@ class ListViewController: ListModule.View, ListViewProtocol {
         return ListViewController()
     }
     
-    func styleTable() {
-        tableView.tableFooterView = UIView()
-        tableView.backgroundColor = ColorHelper.brightColor()
+    func styleOtherElements() {
+        tableView.styleTableViewForBrastlewark()
+        view.backgroundColor = ColorHelper.brightColor()
+        title = "BrastleWark"
+        navigationController?.navigationBar.barTintColor = ColorHelper.darkestColor()
+        navigationController?.navigationBar.tintColor = ColorHelper.brightestColor()
+        navigationController?.navigationBar.titleTextAttributes =
+            [NSAttributedString.Key.font: UIFont(name: "AmaticSC-Bold", size: 36)!,
+             NSAttributedString.Key.foregroundColor: ColorHelper.brightestColor()]
     }
     
     func styleSearchBar() {
@@ -107,6 +107,10 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         }
         return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.showDetail(ofGnome: gnomesToShow[indexPath.row])
     }
 }
 
