@@ -382,7 +382,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="190"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VaE-h6-qU1">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VaE-h6-qU1">
                                                     <rect key="frame" x="8" y="84" width="398" height="22"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="18"/>
                                                     <nil key="textColor"/>
@@ -407,7 +407,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XhN-Ej-v9o">
-                                                    <rect key="frame" x="8" y="8.0000000000000018" width="35.666666666666664" height="19.666666666666671"/>
+                                                    <rect key="frame" x="8" y="8.0000000000000018" width="398" height="19.666666666666671"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -458,6 +458,7 @@
                                                 <constraint firstItem="SYD-th-DRR" firstAttribute="top" secondItem="XhN-Ej-v9o" secondAttribute="bottom" constant="4" id="AXU-1S-ZzG"/>
                                                 <constraint firstItem="XhN-Ej-v9o" firstAttribute="top" secondItem="2Ls-fY-oGz" secondAttribute="top" constant="8" id="FLk-lr-BXl"/>
                                                 <constraint firstItem="XhN-Ej-v9o" firstAttribute="leading" secondItem="2Ls-fY-oGz" secondAttribute="leading" constant="8" id="VwG-jV-QVA"/>
+                                                <constraint firstAttribute="trailing" secondItem="XhN-Ej-v9o" secondAttribute="trailing" constant="8" id="ZmJ-kp-yhp"/>
                                                 <constraint firstAttribute="trailing" secondItem="SYD-th-DRR" secondAttribute="trailing" constant="8" id="kgP-ym-PJy"/>
                                                 <constraint firstItem="SYD-th-DRR" firstAttribute="leading" secondItem="2Ls-fY-oGz" secondAttribute="leading" constant="8" id="qKl-VD-yDm"/>
                                             </constraints>

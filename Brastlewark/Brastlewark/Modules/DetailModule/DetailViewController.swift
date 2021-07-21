@@ -104,7 +104,7 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
                             title: "Friends",
                             tableView: tableView)
         case .noFriends:
-            return getArrayEmptyCell(message: "This gnome doesn't have friends yet", tableView: tableView)
+            return getArrayEmptyCell(message: "This gnome doesn't have any friends yet", tableView: tableView)
         case .noProfessions:
             return getArrayEmptyCell(message: "This gnome doesn't have a profession yet", tableView: tableView)
         }
