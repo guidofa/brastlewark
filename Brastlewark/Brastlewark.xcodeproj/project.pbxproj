@@ -866,7 +866,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3BC955E1ECB9A3DABDE61917 /* Pods-BrastlewarkTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FHFAG7LFX8;
@@ -889,7 +889,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D2C51268B3EEE1482BAC40BC /* Pods-BrastlewarkTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FHFAG7LFX8;
@@ -912,7 +912,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1D9F9ACC4473B31B3E914E22 /* Pods-Brastlewark-BrastlewarkUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FHFAG7LFX8;
 				INFOPLIST_FILE = BrastlewarkUITests/Info.plist;
@@ -933,7 +933,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1D05304807E0E6014E75B57E /* Pods-Brastlewark-BrastlewarkUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FHFAG7LFX8;
 				INFOPLIST_FILE = BrastlewarkUITests/Info.plist;
