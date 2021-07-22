@@ -476,7 +476,6 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dSZ-4L-ySc"/>
-                        <color key="backgroundColor" red="0.019607843137254902" green="0.40000000000000002" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="dSZ-4L-ySc" firstAttribute="bottom" secondItem="rET-kR-PSk" secondAttribute="bottom" id="Ica-cj-SeO"/>
                             <constraint firstItem="rET-kR-PSk" firstAttribute="leading" secondItem="dSZ-4L-ySc" secondAttribute="leading" id="gJL-r1-PuY"/>

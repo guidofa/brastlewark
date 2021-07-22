@@ -43,6 +43,7 @@ class DetailViewController: DetailModule.View, DetailViewProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.styleTableViewForBrastlewark(color: ColorHelper.brightestColor())
+        view.backgroundColor = ColorHelper.darkestColor()
         presenter?.getGnome()
     }
     
