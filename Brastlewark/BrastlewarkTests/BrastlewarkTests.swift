@@ -13,6 +13,29 @@ class BrastlewarkTests: XCTestCase {
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
+    
+    let correctUrl = "https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json"
+    let listInteractor = ListInteractor()
+    
+    func testUrl_shouldpassIfCorrectUrl() {
+        XCTAssertTrue(correctUrl == listInteractor.getUrl())
+    }
+    
+    func testDataRetrivedFromServer() {
+        listInteractor.loadJson(fromURLString: correctUrl) { (result) in
+            switch result {
+            case .success(let data):
+                do {
+                    let decodedData = try JSONDecoder().decode(GnomesEntity.self, from: data)
+                    XCTAssertNotNil(decodedData)
+                } catch {
+                    XCTFail()
+                }
+            case .failure(_):
+                XCTFail()
+            }
+        }
+    }
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.

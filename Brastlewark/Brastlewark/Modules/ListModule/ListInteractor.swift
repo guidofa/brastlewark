@@ -12,10 +12,14 @@ protocol ListInteractorProtocol: AnyObject {
 }
 
 class ListInteractor: ListModule.Interactor, ListInteractorProtocol {
+    
+    func getUrl() -> String {
+        return "https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json"
+    }
+    
     func getGnomes() {
-        let urlString = "https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json"
 
-        self.loadJson(fromURLString: urlString) { (result) in
+        self.loadJson(fromURLString: getUrl()) { (result) in
             switch result {
             case .success(let data):
                 self.parse(jsonData: data)
@@ -34,8 +38,7 @@ class ListInteractor: ListModule.Interactor, ListInteractorProtocol {
         }
     }
     
-    private func loadJson(fromURLString urlString: String,
-                          completion: @escaping (Result<Data, Error>) -> Void) {
+    func loadJson(fromURLString urlString: String, completion: @escaping (Result<Data, Error>) -> Void) {
         if let url = URL(string: urlString) {
             let urlSession = URLSession(configuration: .default).dataTask(with: url) { (data, _, error) in
                 if let error = error {

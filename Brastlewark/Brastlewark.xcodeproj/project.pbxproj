@@ -10,6 +10,7 @@
 		12A3C29AAB08ADBC382177F8 /* Pods_Brastlewark_BrastlewarkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E486B6D4AA8E7912D39728B /* Pods_Brastlewark_BrastlewarkUITests.framework */; };
 		5D16B7804142369FB73F03F1 /* Pods_Brastlewark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E3B48E412B3782391E9723F /* Pods_Brastlewark.framework */; };
 		C5121B3C26A5179800903A0C /* GnomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5121B3B26A5179800903A0C /* GnomeEntity.swift */; };
+		C536E88E26A9D8EF000972A1 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C536E88D26A9D8EF000972A1 /* TestData.swift */; };
 		C549917026A5DEDC001B5D00 /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C549916F26A5DEDC001B5D00 /* ColorHelper.swift */; };
 		C549917A26A5E1B5001B5D00 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C549917526A5E1B5001B5D00 /* Montserrat-Light.ttf */; };
 		C549917B26A5E1B5001B5D00 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C549917626A5E1B5001B5D00 /* Montserrat-Regular.ttf */; };
@@ -76,6 +77,7 @@
 		72105DBFB90A49BB6A19DAD9 /* Pods_BrastlewarkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BrastlewarkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B897FEEA5FE42D671E1D797 /* Pods-Brastlewark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brastlewark.debug.xcconfig"; path = "Target Support Files/Pods-Brastlewark/Pods-Brastlewark.debug.xcconfig"; sourceTree = "<group>"; };
 		C5121B3B26A5179800903A0C /* GnomeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GnomeEntity.swift; sourceTree = "<group>"; };
+		C536E88D26A9D8EF000972A1 /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 		C549916F26A5DEDC001B5D00 /* ColorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
 		C549917526A5E1B5001B5D00 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
 		C549917626A5E1B5001B5D00 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 			children = (
 				C565576D26A5124700ECF9F6 /* BrastlewarkTests.swift */,
 				C565576F26A5124700ECF9F6 /* Info.plist */,
+				C536E88D26A9D8EF000972A1 /* TestData.swift */,
 			);
 			path = BrastlewarkTests;
 			sourceTree = "<group>";
@@ -656,6 +659,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C565576E26A5124700ECF9F6 /* BrastlewarkTests.swift in Sources */,
+				C536E88E26A9D8EF000972A1 /* TestData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
