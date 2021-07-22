@@ -30,7 +30,7 @@ class ListInteractor: ListModule.Interactor, ListInteractorProtocol {
             let decodedData = try JSONDecoder().decode(GnomesEntity.self, from: jsonData)
             presenter?.getGnomesSuccess(data: decodedData.Brastlewark)
         } catch {
-            print("decode error")
+            presenter?.getGnomeFailed(message: "Oops, data not found")
         }
     }
     

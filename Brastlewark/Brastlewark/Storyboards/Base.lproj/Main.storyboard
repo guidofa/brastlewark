@@ -49,9 +49,8 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ham-KX-gCU" userLabel="ImageContainer">
                                                             <rect key="frame" x="0.0" y="0.0" width="99.666666666666671" height="116"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gnome_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="fts-2e-t0z">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fts-2e-t0z">
                                                                     <rect key="frame" x="13.333333333333329" y="21.666666666666664" width="73" height="72.666666666666686"/>
-                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" secondItem="fts-2e-t0z" secondAttribute="height" multiplier="1:1" id="8iw-HE-RFs"/>
                                                                     </constraints>
@@ -104,7 +103,7 @@
                                                                                             <constraints>
                                                                                                 <constraint firstAttribute="height" constant="17" id="8WF-9O-3Xo"/>
                                                                                             </constraints>
-                                                                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                                                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                                                                                             <nil key="textColor"/>
                                                                                             <nil key="highlightedColor"/>
                                                                                         </label>
@@ -133,7 +132,7 @@
                                                                                             <constraints>
                                                                                                 <constraint firstAttribute="height" constant="17" id="wr1-DS-DZv"/>
                                                                                             </constraints>
-                                                                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                                                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                                                                                             <nil key="textColor"/>
                                                                                             <nil key="highlightedColor"/>
                                                                                         </label>
@@ -162,7 +161,7 @@
                                                                                             <constraints>
                                                                                                 <constraint firstAttribute="height" constant="17" id="mpp-yR-EEB"/>
                                                                                             </constraints>
-                                                                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                                                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                                                                                             <nil key="textColor"/>
                                                                                             <nil key="highlightedColor"/>
                                                                                         </label>
@@ -262,7 +261,6 @@
                                                             </constraints>
                                                         </view>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.019607843140000001" green="0.40000000000000002" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="vio-RX-j72" firstAttribute="width" secondItem="dIh-qn-mYH" secondAttribute="width" multiplier="3/12" id="FkO-Oc-Ofx"/>
                                                         <constraint firstAttribute="trailing" secondItem="vio-RX-j72" secondAttribute="trailing" id="GJe-TG-xPX"/>
@@ -336,6 +334,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="animationView" destination="tU1-fN-1EV" id="2wh-kO-cjQ"/>
+                                            <outlet property="messageToShow" destination="VKY-oS-9Gn" id="Ima-Dk-z6F"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -591,7 +590,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="gnome_placeholder" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

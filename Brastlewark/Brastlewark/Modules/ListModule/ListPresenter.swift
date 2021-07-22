@@ -10,6 +10,7 @@ import UIKit
 protocol ListPresenterProtocol: BasePresenterProtocol {
     func getGnomes()
     func getGnomesSuccess(data: [GnomeEntity]?)
+    func getGnomeFailed(message: String)
     func filterGnomesByName(with text: String)
     func getOriginalList()
     func showDetail(ofGnome gnome: GnomeEntity)
@@ -27,6 +28,10 @@ class ListPresenter: ListModule.Presenter, ListPresenterProtocol {
             self.gnomes = gnomes
         }
         view?.getGnomesSuccess(data: data)
+    }
+    
+    func getGnomeFailed(message: String) {
+        view?.getGnomeFailed(messageToShow: message)
     }
     
     func filterGnomesByName(with stringToFilter: String) {

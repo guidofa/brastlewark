@@ -11,6 +11,7 @@ protocol ListViewProtocol: UIViewController {
     func getGnomesSuccess(data: [GnomeEntity]?)
     func filterGnomesByNameResult(gnomesFiltered: [GnomeEntity])
     func getOriginalListSuccess(originalGnomesList: [GnomeEntity])
+    func getGnomeFailed(messageToShow: String)
 }
 
 class ListViewController: ListModule.View, ListViewProtocol {
@@ -21,6 +22,7 @@ class ListViewController: ListModule.View, ListViewProtocol {
         returnToList()
     }
     
+    fileprivate var messageToShow = "Fetching data..."
     fileprivate var gnomesToShow: [GnomeEntity] = [] {
         didSet {
             DispatchQueue.main.async {
@@ -73,7 +75,17 @@ class ListViewController: ListModule.View, ListViewProtocol {
         }
     }
     
+    func getGnomeFailed(messageToShow: String) {
+        self.messageToShow = messageToShow
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
     func filterGnomesByNameResult(gnomesFiltered: [GnomeEntity]) {
+        if gnomesFiltered.isEmpty {
+            messageToShow = "There aren't any gnomes with that name..."
+        }
         gnomesToShow = gnomesFiltered
     }
     
@@ -88,7 +100,7 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 124
+        return gnomesToShow.isEmpty ? UITableView.automaticDimension : 124
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -97,6 +109,7 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
             if let cell = tableView
                 .dequeueReusableCell(withIdentifier: "ListErrorCell")
                 as? ListErrorCell {
+                cell.configure(withMessage: messageToShow)
                 returnToListButton.isHidden = false
                 return cell
             }

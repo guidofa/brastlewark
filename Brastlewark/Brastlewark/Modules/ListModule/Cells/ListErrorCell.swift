@@ -10,6 +10,7 @@ import Lottie
 
 class ListErrorCell: UITableViewCell {
     @IBOutlet fileprivate var animationView: AnimationView!
+    @IBOutlet fileprivate var messageToShow: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,5 +20,9 @@ class ListErrorCell: UITableViewCell {
         animationView.play()
         animationView.backgroundColor = ColorHelper.brightColor()
         self.contentView.backgroundColor = ColorHelper.brightColor()
+    }
+    
+    func configure(withMessage message: String) {
+        messageToShow.text = message
     }
 }
