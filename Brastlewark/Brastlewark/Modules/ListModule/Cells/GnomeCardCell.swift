@@ -37,9 +37,10 @@ class GnomeCardCell: UITableViewCell {
     }
     
     func styleCardView() {
-        cardView.layer.borderWidth = 1
-        cardView.layer.cornerRadius = 4
-        cardView.backgroundColor = ColorHelper.darkestColor()
+        cardView.layer.cornerRadius = 6
+        cardView.backgroundColor = ColorHelper.darkestColor(alpha: 0.6)
+        cardView.layer.applySketchShadow(color: .black, alpha: 0.5, x: 0, y: 1, blur: 3, spread: 0)
+        cardView.layer.masksToBounds = false
         self.contentView.backgroundColor = ColorHelper.brightColor()
     }
     

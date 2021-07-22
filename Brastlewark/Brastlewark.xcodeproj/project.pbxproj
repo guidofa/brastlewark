@@ -10,6 +10,7 @@
 		12A3C29AAB08ADBC382177F8 /* Pods_Brastlewark_BrastlewarkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E486B6D4AA8E7912D39728B /* Pods_Brastlewark_BrastlewarkUITests.framework */; };
 		5D16B7804142369FB73F03F1 /* Pods_Brastlewark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E3B48E412B3782391E9723F /* Pods_Brastlewark.framework */; };
 		C5121B3C26A5179800903A0C /* GnomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5121B3B26A5179800903A0C /* GnomeEntity.swift */; };
+		C536E87426A9A230000972A1 /* CALayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C536E87326A9A230000972A1 /* CALayerExtension.swift */; };
 		C549917026A5DEDC001B5D00 /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C549916F26A5DEDC001B5D00 /* ColorHelper.swift */; };
 		C549917A26A5E1B5001B5D00 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C549917526A5E1B5001B5D00 /* Montserrat-Light.ttf */; };
 		C549917B26A5E1B5001B5D00 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C549917626A5E1B5001B5D00 /* Montserrat-Regular.ttf */; };
@@ -76,6 +77,7 @@
 		72105DBFB90A49BB6A19DAD9 /* Pods_BrastlewarkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BrastlewarkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B897FEEA5FE42D671E1D797 /* Pods-Brastlewark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brastlewark.debug.xcconfig"; path = "Target Support Files/Pods-Brastlewark/Pods-Brastlewark.debug.xcconfig"; sourceTree = "<group>"; };
 		C5121B3B26A5179800903A0C /* GnomeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GnomeEntity.swift; sourceTree = "<group>"; };
+		C536E87326A9A230000972A1 /* CALayerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerExtension.swift; sourceTree = "<group>"; };
 		C549916F26A5DEDC001B5D00 /* ColorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
 		C549917526A5E1B5001B5D00 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
 		C549917626A5E1B5001B5D00 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				C5F5FC3826A5F20B0053A2CE /* UIImageViewExtension.swift */,
 				C56771BB26A74FD200CD855D /* UIButtonExtension.swift */,
 				C5567FEA26A86C650099100A /* UITableViewExtension.swift */,
+				C536E87326A9A230000972A1 /* CALayerExtension.swift */,
 			);
 			path = "Helpers and Extensions";
 			sourceTree = "<group>";
@@ -629,6 +632,7 @@
 				C5567FF626A88E9A0099100A /* CarouselTableCell.swift in Sources */,
 				C56771BC26A74FD200CD855D /* UIButtonExtension.swift in Sources */,
 				C5567FFB26A88EA70099100A /* CarouselCollectionCell.swift in Sources */,
+				C536E87426A9A230000972A1 /* CALayerExtension.swift in Sources */,
 				C588CBF926A51FEB00CFA1EE /* ListRouter.swift in Sources */,
 				C588CBFE26A51FF900CFA1EE /* ListPresenter.swift in Sources */,
 				C588CC2126A53D5F00CFA1EE /* DetailViewController.swift in Sources */,

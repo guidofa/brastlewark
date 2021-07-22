@@ -8,8 +8,8 @@
 import UIKit
 
 class ColorHelper: NSObject {
-    class func darkestColor() -> UIColor {
-        return UIColor(red: 5/255, green: 102/255, blue: 118/255, alpha: 1)
+    class func darkestColor(alpha: CGFloat = 1) -> UIColor {
+        return UIColor(red: 5/255, green: 102/255, blue: 118/255, alpha: alpha)
     }
     
     class func darkColor() -> UIColor {
