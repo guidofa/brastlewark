@@ -46,6 +46,6 @@ Bonus:
  Test the app` 
 
 ## Copyright
-Icons from https://www.flaticon.es/.
-Animations from lottiefiles.com
-Copyright © 2021 Guido Fabio.
+1. Icons from https://www.flaticon.es/.
+1. Animations from lottiefiles.com<br>
+**Copyright © 2021 Guido Fabio.**
