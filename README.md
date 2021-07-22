@@ -4,7 +4,7 @@ Brastlewark is an app that shows you in a friendly way all the citizens from **'
 You can find more info in the statement section. 
 
 ## The App
-Brastilewark-app has two screens, one in order to **list** all the gnomes with reduced details where you can *filter by name* and another one for the visualization of a gnome in *particular*.
+Brastilewark-app has two main screens, one in order to **list** all the gnomes with reduced details where you can *filter by name* and another one for the visualization of a gnome in *particular*.
 <br>
 <p align="center">
 <img src="https://raw.githubusercontent.com/guidofa/brastlewark/dev/Brastlewark/Brastlewark/SupportingFiles/Screenshots/Launch.png " width="250">
