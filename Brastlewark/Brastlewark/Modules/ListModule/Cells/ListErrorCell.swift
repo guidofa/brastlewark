@@ -17,12 +17,12 @@ class ListErrorCell: UITableViewCell {
         animationView.contentMode = .scaleAspectFit
         animationView.loopMode = .loop
         animationView.animationSpeed = 1
-        animationView.play()
         animationView.backgroundColor = ColorHelper.brightColor()
         self.contentView.backgroundColor = ColorHelper.brightColor()
     }
     
     func configure(withMessage message: String) {
         messageToShow.text = message
+        animationView.play()
     }
 }
