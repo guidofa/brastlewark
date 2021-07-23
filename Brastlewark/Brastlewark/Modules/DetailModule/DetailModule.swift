@@ -10,17 +10,10 @@ import UIKit
 class DetailModule: NSObject {
     static func assemble(gnomeToShow gnome: GnomeEntity) -> DetailViewProtocol {
         let view = DetailViewController.create()
-        let interactor = DetailInteractor()
         let presenter = DetailPresenter()
-        let router = DetailRouter()
-
         presenter.view = view
-        presenter.interactor = interactor
-        presenter.router = router
         presenter.gnome = gnome
         view.presenter = presenter
-        interactor.presenter = presenter
-        router.presenter = presenter
                 
         return view
     }
@@ -38,8 +31,6 @@ class DetailModule: NSObject {
     class Presenter: NSObject {
         
         weak var view: DetailViewProtocol?
-        var interactor: DetailInteractorProtocol?
-        var router: DetailRouterProtocol?
         
         var navigation: UINavigationController? { return view?.navigationController }
     }

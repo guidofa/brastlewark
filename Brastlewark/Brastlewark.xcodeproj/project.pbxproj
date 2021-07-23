@@ -45,8 +45,6 @@
 		C588CC1926A53D5300CFA1EE /* DetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C588CC1826A53D5300CFA1EE /* DetailModule.swift */; };
 		C588CC2126A53D5F00CFA1EE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C588CC2026A53D5F00CFA1EE /* DetailViewController.swift */; };
 		C588CC2626A53D6900CFA1EE /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C588CC2526A53D6900CFA1EE /* DetailPresenter.swift */; };
-		C588CC2B26A53D7600CFA1EE /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C588CC2A26A53D7600CFA1EE /* DetailInteractor.swift */; };
-		C588CC3026A53D8600CFA1EE /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C588CC2F26A53D8600CFA1EE /* DetailRouter.swift */; };
 		C5F5FC3326A5EAB70053A2CE /* AmaticSC-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C5F5FC3126A5EAB70053A2CE /* AmaticSC-Bold.ttf */; };
 		C5F5FC3426A5EAB70053A2CE /* AmaticSC-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C5F5FC3226A5EAB70053A2CE /* AmaticSC-Regular.ttf */; };
 		C5F5FC3926A5F20B0053A2CE /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5FC3826A5F20B0053A2CE /* UIImageViewExtension.swift */; };
@@ -121,8 +119,6 @@
 		C588CC1826A53D5300CFA1EE /* DetailModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModule.swift; sourceTree = "<group>"; };
 		C588CC2026A53D5F00CFA1EE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C588CC2526A53D6900CFA1EE /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
-		C588CC2A26A53D7600CFA1EE /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
-		C588CC2F26A53D8600CFA1EE /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
 		C5F5FC3126A5EAB70053A2CE /* AmaticSC-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AmaticSC-Bold.ttf"; sourceTree = "<group>"; };
 		C5F5FC3226A5EAB70053A2CE /* AmaticSC-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AmaticSC-Regular.ttf"; sourceTree = "<group>"; };
 		C5F5FC3826A5F20B0053A2CE /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
@@ -363,8 +359,6 @@
 				C588CC1826A53D5300CFA1EE /* DetailModule.swift */,
 				C588CC2026A53D5F00CFA1EE /* DetailViewController.swift */,
 				C588CC2526A53D6900CFA1EE /* DetailPresenter.swift */,
-				C588CC2A26A53D7600CFA1EE /* DetailInteractor.swift */,
-				C588CC2F26A53D8600CFA1EE /* DetailRouter.swift */,
 			);
 			path = DetailModule;
 			sourceTree = "<group>";
@@ -647,7 +641,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C588CC3026A53D8600CFA1EE /* DetailRouter.swift in Sources */,
 				C588CBEF26A51FCC00CFA1EE /* ListInteractor.swift in Sources */,
 				C5567FF626A88E9A0099100A /* CarouselTableCell.swift in Sources */,
 				C56771BC26A74FD200CD855D /* UIButtonExtension.swift in Sources */,
@@ -667,7 +660,6 @@
 				C588CC2626A53D6900CFA1EE /* DetailPresenter.swift in Sources */,
 				C5F5FC3926A5F20B0053A2CE /* UIImageViewExtension.swift in Sources */,
 				C54C752126A68573009A91DA /* ListErrorCell.swift in Sources */,
-				C588CC2B26A53D7600CFA1EE /* DetailInteractor.swift in Sources */,
 				C556800826A8ACAB0099100A /* ArrayEmptyCell.swift in Sources */,
 				C588CC0826A5208400CFA1EE /* GnomeCardCell.swift in Sources */,
 				C588CC0326A5206800CFA1EE /* ListModule.swift in Sources */,

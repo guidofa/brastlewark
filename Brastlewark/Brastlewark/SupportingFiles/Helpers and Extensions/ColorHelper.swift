@@ -8,6 +8,8 @@
 import UIKit
 
 class ColorHelper: NSObject {
+    
+    // MARK: You can change the whole color palette here.
     class func darkestColor(alpha: CGFloat = 1) -> UIColor {
         return UIColor(red: 5/255, green: 102/255, blue: 118/255, alpha: alpha)
     }
