@@ -355,7 +355,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="51M-FH-JN4"/>
                                 </constraints>
-                                <state key="normal" title="Return to full list"/>
+                                <state key="normal" title="Refresh"/>
                                 <connections>
                                     <action selector="returnToListOnClick" destination="BYZ-38-t0r" eventType="touchUpInside" id="TxJ-yd-1zP"/>
                                 </connections>
