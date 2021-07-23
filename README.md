@@ -28,7 +28,7 @@ The app is made with Swift using VIPER architecture and Xcode 12.4 as IDE, if yo
 * AmaticSC
 
 ## Thirdparty libraries used in this project
-Kingfisher: Used for images management (caché and loaders) https://github.com/onevcat/Kingfisher
+Kingfisher: Used for images management (cache and loaders) https://github.com/onevcat/Kingfisher
 
 Swiftlint:  A tool to enforce Swift style and conventions. https://github.com/realm/SwiftLint
 
