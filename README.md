@@ -1,10 +1,10 @@
 # Brastlewark
 
-Brastlewark is an app that shows you in a friendly way all the citizens from **'Brastlewark'** the best gnome's town in the world. With this app, you can see their name, age, weight, friends, and other useful data that helps heroes with their adventures. Remember that the photos showed are not real photos from the population because they appreciate their privacy.
+Brastlewark is an app that shows you in a friendly way all the citizens from **'Brastlewark'** the best gnome's town in the world. With this app, you can see their name, age, weight, friends, and other useful information that helps heroes with their adventures. Remember that the photos showed are not real photos from the population because they appreciate their privacy.
 You can find more info in the statement section. 
 
 ## The App
-Brastilewark-app has two main screens, one in order to **list** all the gnomes with reduced details where you can *filter by name* and another one for the visualization of a gnome in *particular*.
+Brastlewark-app has two main screens, one with the purpose of **list** all the gnomes with reduced details where you can *filter by name* and another one for the visualization of a gnome in *particular*.
 <br>
 <p align="center">
 <img src="https://raw.githubusercontent.com/guidofa/brastlewark/dev/Brastlewark/Brastlewark/SupportingFiles/Screenshots/Launch.png " width="250">
@@ -14,7 +14,18 @@ Brastilewark-app has two main screens, one in order to **list** all the gnomes w
 <br>
 
 ## Technical details and how to run it
-The app is made with VIPER architecture using Xcode 12.4 if you want to run it run clone the proyect and run 'Pod install' on the folder that contains the 'podfile' file. More info at https://cocoapods.org/ the iOS deployment target is 14.4
+The app is made with Swift using VIPER architecture and Xcode 12.4 as IDE, if you want to run it clone the project and run 'Pod install' on the folder that contains the 'podfile' file. More info at https://cocoapods.org/ the iOS deployment target is 14.4.
+
+## Design details
+### Color Pallete (Hexa codes)
+* #E8DED2
+* #A3D2CA
+* #5EAAA8
+* #056676
+
+### Fonts
+* Montserrat
+* AmaticSC
 
 ## Thirdparty libraries used in this project
 Kingfisher: Used for images management (caché and loaders) https://github.com/onevcat/Kingfisher
@@ -46,6 +57,7 @@ Bonus:
  Test the app` 
 
 ## Copyright
-1. Icons from https://www.flaticon.es/.
-1. Animations from lottiefiles.com<br>
-**Copyright © 2021 Guido Fabio.**
+1. Icons from www.flaticon.es/.
+1. Animations from www.lottiefiles.com 
+1. Fonts from https://fonts.google.com<br>
+***Copyright © 2021 Guido Fabio***
