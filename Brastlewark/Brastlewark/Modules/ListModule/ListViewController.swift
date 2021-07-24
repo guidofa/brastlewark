@@ -17,9 +17,9 @@ protocol ListViewProtocol: UIViewController {
 class ListViewController: ListModule.View, ListViewProtocol {
     @IBOutlet fileprivate weak var tableView: UITableView!
     @IBOutlet fileprivate weak var searchBar: UISearchBar!
-    @IBOutlet fileprivate weak var returnToListButton: UIButton!
-    @IBAction fileprivate func returnToListOnClick() {
-        returnToList()
+    @IBOutlet fileprivate weak var refreshButton: UIButton!
+    @IBAction fileprivate func refreshOnClick() {
+        refresh()
     }
     
     fileprivate var messageToShow = "Fetching data..."
@@ -35,7 +35,7 @@ class ListViewController: ListModule.View, ListViewProtocol {
         super.viewDidLoad()
         styleSearchBar()
         styleOtherElements()
-        returnToListButton.styleDarkestSquared()
+        refreshButton.styleDarkestSquared()
         presenter?.getGnomes()
     }
     
@@ -104,13 +104,13 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        returnToListButton.isHidden = true
+        refreshButton.isHidden = true
         if gnomesToShow.isEmpty {
             if let cell = tableView
                 .dequeueReusableCell(withIdentifier: "ListErrorCell")
                 as? ListErrorCell {
                 cell.configure(withMessage: messageToShow)
-                returnToListButton.isHidden = false
+                refreshButton.isHidden = false
                 return cell
             }
         }
@@ -140,10 +140,10 @@ extension ListViewController: UISearchBarDelegate {
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        returnToList()
+        refresh()
     }
     
-    func returnToList() {
+    func refresh() {
         searchBar.resignFirstResponder()
         searchBar.setShowsCancelButton(false, animated: true)
         searchBar.text = ""

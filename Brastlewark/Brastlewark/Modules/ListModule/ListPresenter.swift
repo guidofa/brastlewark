@@ -40,7 +40,11 @@ class ListPresenter: ListModule.Presenter, ListPresenterProtocol {
     }
     
     func getOriginalList() {
-        view?.getOriginalListSuccess(originalGnomesList: gnomes)
+        if gnomes.isEmpty {
+            getGnomes()
+        } else {
+            view?.getOriginalListSuccess(originalGnomesList: gnomes)
+        }
     }
     
     func showDetail(ofGnome gnome: GnomeEntity) {

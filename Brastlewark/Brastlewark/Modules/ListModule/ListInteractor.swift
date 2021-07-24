@@ -12,7 +12,6 @@ protocol ListInteractorProtocol: AnyObject {
 }
 
 class ListInteractor: ListModule.Interactor, ListInteractorProtocol {
-    
     func getUrl() -> String {
         return "https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json"
     }
@@ -25,6 +24,7 @@ class ListInteractor: ListModule.Interactor, ListInteractorProtocol {
                 self.parse(jsonData: data)
             case .failure(let error):
                 print(error)
+                self.presenter?.getGnomeFailed(message: error.localizedDescription)
             }
         }
     }

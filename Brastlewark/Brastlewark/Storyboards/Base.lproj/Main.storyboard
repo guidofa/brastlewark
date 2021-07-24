@@ -358,7 +358,7 @@
                                 </constraints>
                                 <state key="normal" title="Refresh"/>
                                 <connections>
-                                    <action selector="returnToListOnClick" destination="BYZ-38-t0r" eventType="touchUpInside" id="TxJ-yd-1zP"/>
+                                    <action selector="refreshOnClick" destination="BYZ-38-t0r" eventType="touchUpInside" id="2wd-f1-hLY"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -378,7 +378,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="9yZ-YR-Vcn"/>
                     <connections>
-                        <outlet property="returnToListButton" destination="b9R-Zd-iyy" id="NAl-qy-pFJ"/>
+                        <outlet property="refreshButton" destination="b9R-Zd-iyy" id="fzz-4B-HDC"/>
                         <outlet property="searchBar" destination="q8U-7P-ABD" id="bXm-pS-3uG"/>
                         <outlet property="tableView" destination="odL-LF-TD1" id="LdB-Wd-z0N"/>
                     </connections>
