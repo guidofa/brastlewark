@@ -9,20 +9,19 @@ import XCTest
 @testable import Brastlewark
 
 class BrastlewarkTests: XCTestCase {
-
+    var listInteractor: ListInteractor?
+    let correctUrl = "https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json"
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        listInteractor = ListInteractor()
     }
     
-    let correctUrl = "https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json"
-    let listInteractor = ListInteractor()
-    
     func testUrl_shouldpassIfCorrectUrl() {
-        XCTAssertTrue(correctUrl == listInteractor.getUrl())
+        XCTAssertTrue(correctUrl == listInteractor?.getUrl())
     }
     
     func testDataRetrivedFromServer() {
-        listInteractor.loadJson(fromURLString: correctUrl) { (result) in
+        listInteractor?.loadJson(fromURLString: correctUrl) { (result) in
             switch result {
             case .success(let data):
                 do {
@@ -36,21 +35,4 @@ class BrastlewarkTests: XCTestCase {
             }
         }
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
