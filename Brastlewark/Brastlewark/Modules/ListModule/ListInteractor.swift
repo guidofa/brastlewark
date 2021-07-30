@@ -17,7 +17,6 @@ class ListInteractor: ListModule.Interactor, ListInteractorProtocol {
     }
     
     func getGnomes() {
-
         self.loadJson(fromURLString: getUrl()) { (result) in
             switch result {
             case .success(let data):

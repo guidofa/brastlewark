@@ -21,13 +21,16 @@ class DetailHeaderCell: UITableViewCell {
     }
     
     func configure(withGnome gnome: GnomeEntity) {
-        let ageString = gnome.age == 1 ? " year old" : " years old"
         profilePhoto.setThumbnailImage(url: gnome.thumbnail)
         profilePhoto.layer.cornerRadius = 8
-        ageLabel.text = "Age: \(gnome.age)"+ageString
+        ageLabel.text = "Age: \(gnome.age)"+getAgeString(age: gnome.age)
         heightLabel.text = String(format: "Height: %.1f cm", gnome.height)
         weightLabel.text = String(format: "Weight: %.1f kg", gnome.weight)
         hairColorLabel.text = "Hair Color: \(gnome.hair_color)"
+    }
+    
+    func getAgeString(age: Int) -> String {
+        return age == 1 ? " year old" : " years old"
     }
     
     func setTextsColor() {

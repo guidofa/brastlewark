@@ -10,10 +10,13 @@ import XCTest
 
 class BrastlewarkTests: XCTestCase {
     var listInteractor: ListInteractor?
+    var detailHeaderCell: DetailHeaderCell!
     let correctUrl = "https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json"
     
-    override func setUpWithError() throws {
+    override func setUp() {
+        super.setUp()
         listInteractor = ListInteractor()
+        detailHeaderCell = DetailHeaderCell()
     }
     
     func testUrl_shouldpassIfCorrectUrl() {
@@ -34,5 +37,15 @@ class BrastlewarkTests: XCTestCase {
                 XCTFail()
             }
         }
+    }
+    
+    func testGetAgeNotOne() {
+        let result = detailHeaderCell.getAgeString(age: 5)
+        XCTAssertEqual(result, " years old")
+    }
+    
+    func testGetAgeEqualsOne() {
+        let result = detailHeaderCell.getAgeString(age: 1)
+        XCTAssertEqual(result, " year old")
     }
 }
