@@ -7,9 +7,9 @@ You can find more info in the statement section.
 Brastlewark-app has two main screens, one with the purpose of **list** all the gnomes with reduced details where you can *filter by name* and another one for the visualization of a gnome in *particular*.
 <br>
 <p align="center">
-<img src="https://raw.githubusercontent.com/guidofa/brastlewark/dev/Brastlewark/Brastlewark/SupportingFiles/Screenshots/Launch.png " width="250">
-<img src="https://raw.githubusercontent.com/guidofa/brastlewark/dev/Brastlewark/Brastlewark/SupportingFiles/Screenshots/List.png " width="250">
-<img src="https://raw.githubusercontent.com/guidofa/brastlewark/dev/Brastlewark/Brastlewark/SupportingFiles/Screenshots/Detail.png " width="250">
+<img src="https://raw.githubusercontent.com/guidofa/brastlewark/dev/Brastlewark/Brastlewark/SupportingFiles/Screenshots/Launch.png" width="250">
+<img src="https://raw.githubusercontent.com/guidofa/brastlewark/dev/Brastlewark/Brastlewark/SupportingFiles/Screenshots/List.png" width="250">
+<img src="https://raw.githubusercontent.com/guidofa/brastlewark/dev/Brastlewark/Brastlewark/SupportingFiles/Screenshots/Detail.png" width="250">
 </p>
 <br>
 
