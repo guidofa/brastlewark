@@ -9,14 +9,20 @@ import XCTest
 @testable import Brastlewark
 
 class BrastlewarkTests: XCTestCase {
-    var listInteractor: ListInteractor?
-    var detailHeaderCell: DetailHeaderCell!
-    let correctUrl = "https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json"
+    var listInteractor: ListInteractor!
+    var correctUrl: String!
+    
     
     override func setUp() {
         super.setUp()
         listInteractor = ListInteractor()
-        detailHeaderCell = DetailHeaderCell()
+        correctUrl = "https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json"
+    }
+    
+    override func tearDown() {
+        super.tearDown()
+        correctUrl = nil
+        listInteractor = nil
     }
     
     func testUrl_shouldpassIfCorrectUrl() {
@@ -24,7 +30,7 @@ class BrastlewarkTests: XCTestCase {
     }
     
     func testDataRetrivedFromServer() {
-        listInteractor?.loadJson(fromURLString: correctUrl) { (result) in
+        listInteractor.loadJson(fromURLString: correctUrl) { (result) in
             switch result {
             case .success(let data):
                 do {
@@ -40,12 +46,24 @@ class BrastlewarkTests: XCTestCase {
     }
     
     func testGetAgeNotOne() {
-        let result = detailHeaderCell.getAgeString(age: 5)
+        // given
+        let sut = DetailHeaderCell()
+        
+        // when
+        let result = sut.getAgeString(age: 5)
+        
+        //then
         XCTAssertEqual(result, " years old")
     }
     
     func testGetAgeEqualsOne() {
-        let result = detailHeaderCell.getAgeString(age: 1)
+        // given
+        let sut = DetailHeaderCell()
+        
+        // when
+        let result = sut.getAgeString(age: 1)
+        
+        //then
         XCTAssertEqual(result, " year old")
     }
 }

@@ -5,7 +5,7 @@
 //  Created by Guido Fabio on 18/07/2021.
 //
 
-import UIKit
+import Foundation
 
 protocol ListPresenterProtocol: BasePresenterProtocol {
     func getGnomes()
