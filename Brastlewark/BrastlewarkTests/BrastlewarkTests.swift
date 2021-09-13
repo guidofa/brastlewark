@@ -12,7 +12,6 @@ class BrastlewarkTests: XCTestCase {
     var listInteractor: ListInteractor!
     var correctUrl: String!
     
-    
     override func setUp() {
         super.setUp()
         listInteractor = ListInteractor()
