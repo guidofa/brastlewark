@@ -33,9 +33,7 @@ class ListViewController: ListModule.View, ListViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        styleSearchBar()
-        styleOtherElements()
-        refreshButton.styleDarkestSquared()
+        styleElements()
         presenter?.getGnomes()
     }
     
@@ -48,10 +46,24 @@ class ListViewController: ListModule.View, ListViewProtocol {
         return ListViewController()
     }
     
+    func styleElements() {
+        styleNavigationController()
+        styleSearchBar()
+        styleOtherElements()
+    }
+    
     func styleOtherElements() {
+        // MARK: Style table
         tableView.styleTableViewForBrastlewark(color: ColorHelper.brightColor())
+        // MARK: Style view
         view.backgroundColor = ColorHelper.brightColor()
+        // MARK: Style title
         title = "BrastleWark"
+        // MARK: Style refresh button
+        refreshButton.styleDarkestSquared()
+    }
+    
+    func styleNavigationController() {
         navigationController?.navigationBar.barTintColor = ColorHelper.darkestColor()
         navigationController?.navigationBar.tintColor = ColorHelper.brightestColor()
         navigationController?.navigationBar.titleTextAttributes =
@@ -69,6 +81,7 @@ class ListViewController: ListModule.View, ListViewProtocol {
             .setTitleTextAttributes([.foregroundColor: UIColor.gray], for: .disabled)
     }
     
+    // MARK: ListViewProtocol
     func getGnomesSuccess(data: [GnomeEntity]?) {
         if let gnomes = data {
             gnomesToShow = gnomes

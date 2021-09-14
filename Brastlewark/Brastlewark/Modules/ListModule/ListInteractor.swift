@@ -17,7 +17,7 @@ class ListInteractor: ListModule.Interactor, ListInteractorProtocol {
     }
     
     func getGnomes() {
-        self.loadJson(fromURLString: getUrl()) { (result) in
+        Network.loadJson(fromURLString: getUrl()) { (result) in
             switch result {
             case .success(let data):
                 self.parse(jsonData: data)
@@ -34,21 +34,6 @@ class ListInteractor: ListModule.Interactor, ListInteractorProtocol {
             presenter?.getGnomesSuccess(data: decodedData.Brastlewark)
         } catch {
             presenter?.getGnomeFailed(message: "Oops, data not found")
-        }
-    }
-    
-    func loadJson(fromURLString urlString: String, completion: @escaping (Result<Data, Error>) -> Void) {
-        if let url = URL(string: urlString) {
-            let urlSession = URLSession(configuration: .default).dataTask(with: url) { (data, _, error) in
-                if let error = error {
-                    completion(.failure(error))
-                }
-                
-                if let data = data {
-                    completion(.success(data))
-                }
-            }
-            urlSession.resume()
         }
     }
 }

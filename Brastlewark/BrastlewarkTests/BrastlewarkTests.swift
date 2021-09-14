@@ -9,27 +9,25 @@ import XCTest
 @testable import Brastlewark
 
 class BrastlewarkTests: XCTestCase {
-    var listInteractor: ListInteractor!
     var correctUrl: String!
     
     override func setUp() {
         super.setUp()
-        listInteractor = ListInteractor()
         correctUrl = "https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json"
     }
     
     override func tearDown() {
         super.tearDown()
         correctUrl = nil
-        listInteractor = nil
     }
     
     func testUrl_shouldpassIfCorrectUrl() {
-        XCTAssertTrue(correctUrl == listInteractor?.getUrl())
+        let sut = ListInteractor()
+        XCTAssertTrue(correctUrl == sut.getUrl())
     }
     
     func testDataRetrivedFromServer() {
-        listInteractor.loadJson(fromURLString: correctUrl) { (result) in
+        Network.loadJson(fromURLString: correctUrl) { (result) in
             switch result {
             case .success(let data):
                 do {

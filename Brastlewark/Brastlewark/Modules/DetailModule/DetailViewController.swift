@@ -22,6 +22,7 @@ class DetailViewController: DetailModule.View, DetailViewProtocol {
             }
         }
     }
+    
     fileprivate enum TableCellType {
         case header
         case professions
