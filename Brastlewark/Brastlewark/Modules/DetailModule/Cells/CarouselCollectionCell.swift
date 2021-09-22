@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CarouselCollectionCell: UICollectionViewCell {
+final class CarouselCollectionCell: UICollectionViewCell {
     @IBOutlet fileprivate weak var stringToShowLabel: UILabel!
     
     override func awakeFromNib() {

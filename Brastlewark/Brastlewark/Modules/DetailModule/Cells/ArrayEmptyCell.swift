@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ArrayEmptyCell: UITableViewCell {
+final class ArrayEmptyCell: UITableViewCell {
     @IBOutlet fileprivate weak var messageLabel: UILabel!
     
     override func awakeFromNib() {

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetailHeaderCell: UITableViewCell {
+final class DetailHeaderCell: UITableViewCell {
     @IBOutlet fileprivate weak var profilePhoto: UIImageView!
     @IBOutlet fileprivate weak var ageLabel: UILabel!
     @IBOutlet fileprivate weak var heightLabel: UILabel!
@@ -26,7 +26,7 @@ class DetailHeaderCell: UITableViewCell {
         ageLabel.text = "Age: \(gnome.age)"+getAgeString(age: gnome.age)
         heightLabel.text = String(format: "Height: %.1f cm", gnome.height)
         weightLabel.text = String(format: "Weight: %.1f kg", gnome.weight)
-        hairColorLabel.text = "Hair Color: \(gnome.hair_color)"
+        hairColorLabel.text = "Hair Color: \(gnome.hairColor)"
     }
     
     func getAgeString(age: Int) -> String {

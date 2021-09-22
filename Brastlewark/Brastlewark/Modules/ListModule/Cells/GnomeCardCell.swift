@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-class GnomeCardCell: UITableViewCell {
+final class GnomeCardCell: UITableViewCell {
     @IBOutlet fileprivate weak var nameLabel: UILabel!
     @IBOutlet fileprivate weak var ageTitleLabel: UILabel!
     @IBOutlet fileprivate weak var ageValueLabel: UILabel!

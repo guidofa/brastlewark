@@ -8,6 +8,7 @@
 import UIKit
 
 class ListModule: NSObject {
+    // Dependency Injection
     static func assemble() -> ListViewProtocol {
         let view = ListViewController.create()
         let interactor = ListInteractor()

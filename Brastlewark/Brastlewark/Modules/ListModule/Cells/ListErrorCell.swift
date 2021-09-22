@@ -8,7 +8,7 @@
 import UIKit
 import Lottie
 
-class ListErrorCell: UITableViewCell {
+final class ListErrorCell: UITableViewCell {
     @IBOutlet fileprivate var animationView: AnimationView!
     @IBOutlet fileprivate var messageToShow: UILabel!
     

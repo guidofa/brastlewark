@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CarouselTableCell: UITableViewCell {
+final class CarouselTableCell: UITableViewCell {
     @IBOutlet fileprivate weak var titleLabel: UILabel!
     @IBOutlet fileprivate weak var collectionView: UICollectionView!
     var arrayToShow: [String] = [] {

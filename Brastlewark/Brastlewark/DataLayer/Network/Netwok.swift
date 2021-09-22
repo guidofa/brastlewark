@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Network: NSObject {
+final class Network: NSObject {
     class func loadJson(fromURLString urlString: String, completion: @escaping (Result<Data, Error>) -> Void) {
         if let url = URL(string: urlString) {
             let urlSession = URLSession(configuration: .default).dataTask(with: url) { (data, _, error) in
